@@ -443,4 +443,230 @@ footer a {
     }
 
     .cta .btn {
-        width: 100
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Respect users who prefer reduced motion. */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .btn,
+    .shots img {
+        transition: none;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="wrap hero">
+
+        <div class="hero-copy">
+
+            <img
+                class="icon"
+                src="https://play-lh.googleusercontent.com/Q7HIT-wzBQhu58ngM2kAdWZYlx2gxZ04U0Aeqi4MmefUrMIzVsCATr3xDegB6TeuEts366WUYFLkE9MIcpXR6rc=w240-h480-rw"
+                alt="ComeBackHERE app icon"
+            >
+
+            <h1>Save a place.<br>Find your way back.</h1>
+
+            <p class="lead">
+                ComeBackHERE is a simple Android app that saves your GPS
+                location and shows you the direction and distance back to it.
+                Perfect for finding your parked car, campsite or trailhead.
+            </p>
+
+            <a
+                class="btn"
+                href="https://play.google.com/store/apps/details?id=com.companyname.comebackhere"
+            >
+                Get it on Google Play
+            </a>
+
+            <p class="note">
+                Free to download. Contains ads. No account required.
+            </p>
+
+        </div>
+
+        <div class="shots">
+
+            <img
+                src="assets/ComeBackHere_01_Never_Get_Lost.png"
+                alt="ComeBackHERE map and compass showing the way back to a saved location"
+            >
+
+            <img
+                src="assets/ComeBackHere_02_Remember_Parking.png"
+                alt="ComeBackHERE helps you remember where you parked"
+            >
+
+            <img
+                src="assets/ComeBackHere_03_Your_Way_Back.png"
+                alt="ComeBackHERE helps you find your way back"
+            >
+
+        </div>
+
+    </div>
+</header>
+
+<main class="wrap">
+
+    <section>
+        <h2>One job, done simply</h2>
+
+        <ul class="checks">
+            <li>Save your current GPS location</li>
+            <li>See the direction to your saved point</li>
+            <li>Check the distance to your destination</li>
+            <li>Use GPS to help navigate back</li>
+            <li>Simple, easy-to-use interface</li>
+            <li>No account required</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>When it helps</h2>
+
+        <div class="grid">
+
+            <div class="card">
+                <h3>Finding your parked car</h3>
+                <p>
+                    Save your parking spot in a large car park or an unfamiliar
+                    city and walk back to it without guessing.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Hiking and walks</h3>
+                <p>
+                    Save your starting point before heading into a forest or
+                    onto a new trail, then find your way back to it.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Camping and meeting points</h3>
+                <p>
+                    Mark a campsite, hotel, festival meeting point or any
+                    other place you want to revisit.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Exploring somewhere new</h3>
+                <p>
+                    Keep a reference point for your accommodation or a
+                    landmark so you can return to it later.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section>
+        <h2>Private by design</h2>
+
+        <div class="card">
+            <p>
+                ComeBackHERE does not require an account. Your saved location
+                stays on your device. According to the Google Play data safety
+                section, the developer declares that no data is shared with
+                third parties and no data is collected.
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Questions</h2>
+
+        <div class="faq">
+
+            <details>
+                <summary>Is ComeBackHERE free?</summary>
+                <p>
+                    Yes. The app is free to download and contains ads.
+                    There is no subscription mentioned on its Google Play listing.
+                </p>
+            </details>
+
+            <details>
+                <summary>Do I need to create an account?</summary>
+                <p>
+                    No. The app is designed to work without an account,
+                    and saved locations stay on your device.
+                </p>
+            </details>
+
+            <details>
+                <summary>Does it replace a navigation app?</summary>
+                <p>
+                    No. ComeBackHERE focuses on saving a point and showing
+                    the direction and distance back to it. Use your preferred
+                    navigation app for turn-by-turn road directions.
+                </p>
+            </details>
+
+            <details>
+                <summary>What can I save?</summary>
+                <p>
+                    Any location you may want to return to: a parking spot,
+                    campsite, hotel, meeting point, trailhead or landmark.
+                </p>
+            </details>
+
+        </div>
+    </section>
+
+    <section class="cta">
+
+        <div>
+            <h2>Save your spot. Explore freely.</h2>
+            <p>Download ComeBackHERE from Google Play.</p>
+        </div>
+
+        <a
+            class="btn"
+            href="https://play.google.com/store/apps/details?id=com.companyname.comebackhere"
+        >
+            Open Google Play
+        </a>
+
+    </section>
+
+</main>
+
+<footer>
+    <div class="wrap">
+
+        <p>
+            ComeBackHERE: Find My Spot is developed by DevTrollo
+            (Piotr Serafin). This page is published by the app's developer
+            to present the app.
+            Contact:
+            <a href="mailto:devtrollo@gmail.com">devtrollo@gmail.com</a>
+            ·
+            <a href="https://piotrse.github.io/ComeBackHERE-Privacy/">
+                Privacy policy
+            </a>
+        </p>
+
+        <p>
+            Google Play and the Google Play logo are trademarks of Google LLC.
+        </p>
+
+    </div>
+</footer>
+
+</body>
+</html>
