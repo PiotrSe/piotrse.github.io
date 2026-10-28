@@ -3,16 +3,26 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ComeBackHERE: Find My Spot – Save a place, find your way back</title>
+<title>ComeBackHERE: Find My Spot – Save Your GPS Location</title>
 <meta name="description" content="ComeBackHERE is a simple free Android app that saves your GPS location so you can find your parked car, campsite or trailhead again. No account required.">
 <link rel="canonical" href="https://piotrse.github.io/comebackhere/">
+<meta name="robots" content="index, follow, max-image-preview:large">
 <meta property="og:type" content="website">
-<meta property="og:title" content="ComeBackHERE: Find My Spot">
+<meta property="og:site_name" content="ComeBackHERE">
+<meta property="og:title" content="ComeBackHERE: Find My Spot – Save Your GPS Location">
 <meta property="og:description" content="Save a place. Find your way back with GPS. A simple Android app for finding your parked car, campsite or trailhead.">
 <meta property="og:url" content="https://piotrse.github.io/comebackhere/">
-<meta property="og:image" content="https://play-lh.googleusercontent.com/Q7HIT-wzBQhu58ngM2kAdWZYlx2gxZ04U0Aeqi4MmefUrMIzVsCATr3xDegB6TeuEts366WUYFLkE9MIcpXR6rc=w512">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="https://play-lh.googleusercontent.com/Q7HIT-wzBQhu58ngM2kAdWZYlx2gxZ04U0Aeqi4MmefUrMIzVsCATr3xDegB6TeuEts366WUYFLkE9MIcpXR6rc=w64">
+<meta property="og:image" content="https://piotrse.github.io/comebackhere/icon.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="512">
+<meta property="og:image:height" content="512">
+<meta property="og:image:alt" content="ComeBackHERE app icon">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ComeBackHERE: Find My Spot – Save Your GPS Location">
+<meta name="twitter:description" content="Save a place. Find your way back with GPS. A simple Android app for finding your parked car, campsite or trailhead.">
+<meta name="twitter:image" content="https://piotrse.github.io/comebackhere/icon.png">
+<meta name="twitter:image:alt" content="ComeBackHERE app icon">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon-64.png">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -23,8 +33,42 @@
   "description": "Save your current GPS location and find the direction and distance back to it. Useful for finding a parked car, campsite, meeting point or trailhead.",
   "url": "https://play.google.com/store/apps/details?id=com.companyname.comebackhere",
   "downloadUrl": "https://play.google.com/store/apps/details?id=com.companyname.comebackhere",
+  "image": "https://piotrse.github.io/comebackhere/icon.png",
+  "screenshot": [
+    "https://piotrse.github.io/comebackhere/assets/ComeBackHere_01_Never_Get_Lost.png",
+    "https://piotrse.github.io/comebackhere/assets/ComeBackHere_02_Remember_Parking.png",
+    "https://piotrse.github.io/comebackhere/assets/ComeBackHere_03_Your_Way_Back.png"
+  ],
   "author": {"@type": "Person", "name": "Piotr Serafin", "alternateName": "DevTrollo"},
   "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is ComeBackHERE free?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Yes. The app is free to download and contains ads. There is no subscription mentioned on its Google Play listing."}
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need to create an account?",
+      "acceptedAnswer": {"@type": "Answer", "text": "No. The app is designed to work without an account, and saved locations stay on your device."}
+    },
+    {
+      "@type": "Question",
+      "name": "Does it replace a navigation app?",
+      "acceptedAnswer": {"@type": "Answer", "text": "No. ComeBackHERE focuses on saving a point and showing the direction and distance back to it. Use your preferred navigation app for turn-by-turn road directions."}
+    },
+    {
+      "@type": "Question",
+      "name": "What can I save?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Any location you may want to return to: a parking spot, campsite, hotel, meeting point, trailhead or landmark."}
+    }
+  ]
 }
 </script>
 <style>
@@ -44,6 +88,7 @@ h1{font-size:clamp(30px,5vw,48px);line-height:1.12;margin:18px 0 14px;letter-spa
 .btn.small{padding:11px 18px;font-size:15px}
 .note{font-size:13px;color:#b9cdf2;margin-top:12px}
 .shots{flex:1 1 380px;display:flex;gap:14px;justify-content:center;align-items:flex-start}
+.shots picture{display:contents}
 .shots img{width:31%;height:auto;object-fit:contain;border-radius:14px;border:1px solid rgba(255,255,255,.35);box-shadow:0 12px 30px rgba(0,0,0,.3);background:#10141a}
 main{padding:54px 0 20px}
 section{margin-bottom:52px}
@@ -72,16 +117,28 @@ footer a{color:var(--muted)}
 <header>
   <div class="wrap hero">
     <div class="hero-copy">
-      <img class="icon" src="https://play-lh.googleusercontent.com/Q7HIT-wzBQhu58ngM2kAdWZYlx2gxZ04U0Aeqi4MmefUrMIzVsCATr3xDegB6TeuEts366WUYFLkE9MIcpXR6rc=w240-h480-rw" alt="ComeBackHERE app icon">
+      <picture>
+        <source srcset="assets/app-icon.webp" type="image/webp">
+        <img class="icon" src="icon.png" alt="ComeBackHERE app icon" width="512" height="512">
+      </picture>
       <h1>Save a place.<br>Find your way back.</h1>
       <p class="lead">ComeBackHERE is a simple Android app that saves your GPS location and shows you the direction and distance back to it. Perfect for finding your parked car, campsite or trailhead.</p>
       <a class="btn" href="https://play.google.com/store/apps/details?id=com.companyname.comebackhere">Get it on Google Play</a>
       <p class="note">Free to download. Contains ads. No account required.</p>
     </div>
     <div class="shots">
-      <img src="assets/ComeBackHere_01_Never_Get_Lost.png" alt="ComeBackHERE map and compass — Never get lost again">
-      <img src="assets/ComeBackHere_02_Remember_Parking.png" alt="ComeBackHERE — remember where you parked">
-      <img src="assets/ComeBackHere_03_Your_Way_Back.png" alt="ComeBackHERE — your way back, always">
+      <picture>
+        <source srcset="assets/ComeBackHere_01_Never_Get_Lost.webp" type="image/webp">
+        <img src="assets/ComeBackHere_01_Never_Get_Lost.png" alt="ComeBackHERE map and compass — Never get lost again" width="1080" height="1920" decoding="async">
+      </picture>
+      <picture>
+        <source srcset="assets/ComeBackHere_02_Remember_Parking.webp" type="image/webp">
+        <img src="assets/ComeBackHere_02_Remember_Parking.png" alt="ComeBackHERE — remember where you parked" width="1080" height="1920" decoding="async">
+      </picture>
+      <picture>
+        <source srcset="assets/ComeBackHere_03_Your_Way_Back.webp" type="image/webp">
+        <img src="assets/ComeBackHere_03_Your_Way_Back.png" alt="ComeBackHERE — your way back, always" width="1080" height="1920" decoding="async">
+      </picture>
     </div>
   </div>
 </header>
