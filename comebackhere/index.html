@@ -7,6 +7,7 @@
 <meta name="description" content="ComeBackHERE is a simple free Android app that saves your GPS location so you can find your parked car, campsite or trailhead again. No account required.">
 <link rel="canonical" href="https://piotrse.github.io/comebackhere/">
 <meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#06121c">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="ComeBackHERE">
 <meta property="og:title" content="ComeBackHERE: Find My Spot – Save Your GPS Location">
@@ -23,6 +24,10 @@
 <meta name="twitter:image" content="https://piotrse.github.io/comebackhere/icon.png">
 <meta name="twitter:image:alt" content="ComeBackHERE app icon">
 <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon-64.png">
+<link rel="preload" as="image" href="assets/screen-hero.webp" type="image/webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -72,118 +77,568 @@
 }
 </script>
 <style>
-:root{--bg:#f5f8fc;--card:#fff;--text:#172033;--muted:#5b677d;--accent:#1f6feb;--accent2:#0b4bb3;--border:#e2e8f0}
+:root{
+  --ink:#06121c;
+  --ink-2:#0a1c29;
+  --ink-3:#0e2736;
+  --green:#3ce57f;
+  --green-bright:#6bf5a5;
+  --green-deep:#0b7c47;
+  --green-soft:#e4f8ed;
+  --paper:#f4f8f5;
+  --paper-2:#edf5f0;
+  --white:#f6fcf8;
+  --text:#0b1d27;
+  --muted:#556a73;
+  --muted-light:#a3b8c2;
+  --line-light:#dfebe5;
+  --line-dark:rgba(255,255,255,.11);
+  --font-body:"Manrope",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --font-display:"Sora","Manrope",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --shadow-card:0 24px 50px -34px rgba(8,43,27,.35);
+  --shadow-phone:0 50px 100px -35px rgba(0,0,0,.9),0 0 0 1px rgba(255,255,255,.1),0 0 120px rgba(60,229,127,.16);
+}
 *{box-sizing:border-box}
-body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
-a{color:var(--accent)}
-.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
-header{background:linear-gradient(160deg,#0b1b3a 0%,#123a7a 55%,#1f6feb 100%);color:#fff;padding:64px 0 56px}
-.hero{display:flex;gap:40px;align-items:center;flex-wrap:wrap}
-.hero-copy{flex:1 1 460px}
-.icon{width:104px;height:104px;border-radius:24px;box-shadow:0 12px 30px rgba(0,0,0,.28);background:#fff}
-h1{font-size:clamp(30px,5vw,48px);line-height:1.12;margin:18px 0 14px;letter-spacing:-.5px}
-.lead{font-size:19px;color:#dce8ff;max-width:620px;margin:0 0 26px}
-.btn{display:inline-block;background:#fff;color:#0b3d91;font-weight:700;text-decoration:none;padding:15px 26px;border-radius:12px;box-shadow:0 10px 26px rgba(0,0,0,.22)}
-.btn:hover{background:#eaf1ff}
-.btn.small{padding:11px 18px;font-size:15px}
-.note{font-size:13px;color:#b9cdf2;margin-top:12px}
-.shots{flex:1 1 380px;display:flex;gap:14px;justify-content:center;align-items:flex-start}
-.shots picture{display:contents}
-.shots img{width:31%;height:auto;object-fit:contain;border-radius:14px;border:1px solid rgba(255,255,255,.35);box-shadow:0 12px 30px rgba(0,0,0,.3);background:#10141a}
-main{padding:54px 0 20px}
-section{margin-bottom:52px}
-h2{font-size:28px;margin:0 0 16px;letter-spacing:-.3px}
-h3{font-size:19px;margin:0 0 6px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
-.card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:22px;box-shadow:0 4px 16px rgba(23,32,51,.04)}
-.card p{margin:0;color:var(--muted);font-size:15px}
-ul.checks{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px}
-ul.checks li{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:14px 16px 14px 44px;position:relative}
-ul.checks li:before{content:"";position:absolute;left:16px;top:20px;width:10px;height:10px;border-radius:50%;background:var(--accent)}
-.faq{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:8px 22px}
-details{border-bottom:1px solid var(--border);padding:16px 0}
-details:last-child{border-bottom:0}
-summary{font-weight:600;cursor:pointer}
-details p{color:var(--muted);margin:10px 0 0}
-.cta{background:#0b1b3a;color:#fff;border-radius:20px;padding:34px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
-.cta h2{margin:0 0 6px}
-.cta p{margin:0;color:#c9d8f5}
-footer{border-top:1px solid var(--border);padding:26px 0 40px;color:var(--muted);font-size:14px}
-footer a{color:var(--muted)}
-@media(max-width:700px){header{padding:38px 0 36px}.shots{flex:1 1 100%;gap:8px}.shots img{width:32%;border-radius:9px}.hero{gap:28px}}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--font-body);background:var(--ink);color:var(--white);line-height:1.65;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+img{display:block;max-width:100%}
+a{color:inherit}
+button,summary{font:inherit}
+:focus-visible{outline:3px solid var(--green);outline-offset:3px}
+.container{width:min(1180px,100% - 48px);margin-inline:auto}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.skip-link{position:fixed;left:18px;top:-80px;z-index:100;background:var(--green);color:#04150b;padding:12px 18px;border-radius:12px;font-weight:800;text-decoration:none;transition:top .2s}
+.skip-link:focus{top:18px}
+.site-header{position:sticky;top:0;z-index:60;background:#07131e;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.07);box-shadow:0 10px 30px -24px rgba(0,0,0,.8)}
+.nav{display:flex;align-items:center;gap:32px;min-height:76px}
+.brand{display:inline-flex;align-items:center;gap:11px;text-decoration:none;font-family:var(--font-display);font-weight:800;font-size:1.08rem;letter-spacing:-.03em;white-space:nowrap}
+.brand-icon{width:38px;height:38px;border-radius:11px;box-shadow:0 6px 18px rgba(0,0,0,.35)}
+.brand span span{color:var(--green)}
+.nav-links{display:flex;align-items:center;gap:28px;margin-left:auto}
+.nav-links a{color:#bdcfd6;text-decoration:none;font-size:.9rem;font-weight:600;transition:color .2s}
+.nav-links a:hover{color:#fff}
+.nav .btn-play{margin-left:4px}
+.btn-play{display:inline-flex;align-items:center;justify-content:center;gap:12px;padding:13px 22px;border-radius:15px;background:linear-gradient(135deg,var(--green-bright),var(--green) 55%,#26d76d);color:#04170b;text-decoration:none;font-weight:800;line-height:1;box-shadow:0 14px 34px -12px rgba(60,229,127,.65);transition:transform .2s ease,box-shadow .2s ease,filter .2s ease}
+.btn-play:hover{transform:translateY(-2px);box-shadow:0 20px 42px -14px rgba(60,229,127,.8);filter:brightness(1.04)}
+.btn-play svg{width:23px;height:23px;flex:none}
+.btn-play .play-label{display:flex;flex-direction:column;gap:4px;text-align:left}
+.btn-play .play-label small{font-size:.55rem;line-height:1;letter-spacing:.12em;text-transform:uppercase;font-weight:800;opacity:.72}
+.btn-play .play-label strong{font-size:1.06rem;line-height:1;letter-spacing:-.02em}
+.btn-play.compact{padding:11px 17px;font-size:.86rem;border-radius:12px}
+.btn-play.compact svg{width:17px;height:17px}
+.btn-play.large{padding:17px 28px;border-radius:17px}
+.btn-play.large .play-label strong{font-size:1.18rem}
+.btn-ghost{display:inline-flex;align-items:center;gap:9px;padding:14px 4px;color:#d8e6eb;text-decoration:none;font-weight:700;font-size:.95rem;transition:color .2s}
+.btn-ghost svg{width:18px;height:18px;transition:transform .2s}
+.btn-ghost:hover{color:var(--green)}
+.btn-ghost:hover svg{transform:translateX(3px)}
+.hero{position:relative;overflow:hidden;padding:clamp(56px,8vw,98px) 0 0;background:radial-gradient(900px 640px at 78% 8%,rgba(60,229,127,.14),transparent 66%),radial-gradient(1000px 720px at 10% -10%,rgba(24,104,154,.24),transparent 62%),linear-gradient(180deg,#081a27 0%,var(--ink) 100%)}
+.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:58px 58px;mask-image:radial-gradient(ellipse at 55% 22%,#000 0%,transparent 72%);-webkit-mask-image:radial-gradient(ellipse at 55% 22%,#000 0%,transparent 72%);pointer-events:none}
+.hero-grid{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(32px,5vw,70px);align-items:center;padding-bottom:clamp(52px,7vw,86px)}
+.hero-copy{max-width:620px}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;margin:0 0 24px;padding:8px 14px 8px 11px;border:1px solid rgba(255,255,255,.13);border-radius:999px;background:rgba(255,255,255,.045);color:#c4d8df;font-size:.74rem;font-weight:700;letter-spacing:.055em;text-transform:uppercase}
+.eyebrow-dot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 0 5px rgba(60,229,127,.12)}
+.hero h1{font-family:var(--font-display);font-size:clamp(2.6rem,4.9vw,3.85rem);line-height:1.02;letter-spacing:-.05em;margin:0 0 24px;font-weight:800;text-wrap:balance}
+.hero h1 .grad{background:linear-gradient(100deg,var(--green-bright) 0%,var(--green) 45%,#19c7ae 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{margin:0 0 32px;max-width:570px;color:#b5c8d0;font-size:clamp(1rem,1.4vw,1.12rem);line-height:1.7}
+.hero-actions{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.micro{margin:18px 0 0;color:#7e98a3;font-size:.8rem;font-weight:600;letter-spacing:.01em}
+.micro span{padding:0 7px;opacity:.55}
+.hero-visual{position:relative;display:grid;place-items:center;min-height:560px}
+.orbit{position:absolute;border-radius:50%;border:1px solid rgba(60,229,127,.16);pointer-events:none}
+.orbit::before,.orbit::after{content:"";position:absolute;border-radius:50%;border:1px solid rgba(255,255,255,.055)}
+.orbit-1{width:520px;height:520px}
+.orbit-1::before{inset:46px}
+.orbit-1::after{inset:100px}
+.orbit-2{width:660px;height:660px;border-style:dashed;border-color:rgba(255,255,255,.06);animation:spin 60s linear infinite}
+.orbit-2::before{inset:38px}
+.orbit-2::after{inset:120px}
+@keyframes spin{to{transform:rotate(360deg)}}
+.hero-phone{position:relative;width:clamp(265px,29vw,356px);padding:9px;border-radius:44px;background:linear-gradient(150deg,#2e4354,#111f2b 34%,#050e15);box-shadow:var(--shadow-phone);animation:float 7s ease-in-out infinite}
+.hero-phone::before{content:"";position:absolute;inset:-2px;border-radius:46px;padding:1px;background:linear-gradient(140deg,rgba(255,255,255,.34),transparent 30%,transparent 70%,rgba(60,229,127,.3));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none}
+.hero-phone img{width:100%;height:auto;border-radius:36px}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.hero-trust{position:relative;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;padding:22px 0;border-top:1px solid rgba(255,255,255,.08)}
+.hero-trust span{display:inline-flex;align-items:center;gap:9px;color:#93aab4;font-size:.82rem;font-weight:600}
+.hero-trust svg{width:17px;height:17px;color:var(--green);flex:none}
+.section{padding:clamp(68px,9vw,116px) 0}
+section[id]{scroll-margin-top:92px}
+.section-light{background:var(--paper);color:var(--text)}
+.section-white{background:#fff;color:var(--text)}
+.section-dark{position:relative;overflow:hidden;background:linear-gradient(180deg,#081b28 0%,#05111a 100%);color:var(--white)}
+.kicker{display:inline-flex;align-items:center;gap:9px;margin:0 0 18px;font-size:.73rem;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:var(--green-deep)}
+.kicker::before{content:"";width:22px;height:2px;border-radius:2px;background:currentColor;opacity:.8}
+.kicker-light{color:var(--green)}
+.section-head{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.78fr);gap:clamp(24px,5vw,72px);align-items:end;margin-bottom:clamp(38px,5vw,58px)}
+.section-head h2,.steps-title,.faq-intro h2,.privacy h2,.cta h2{font-family:var(--font-display);font-size:clamp(2rem,4vw,3.25rem);line-height:1.05;letter-spacing:-.04em;margin:0;font-weight:800;text-wrap:balance}
+.section-intro{margin:0;justify-self:end;max-width:46ch;color:var(--muted);font-size:1rem;line-height:1.7}
+.section-head-light .section-intro{color:var(--muted-light)}
+.features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.feature{display:flex;flex-direction:column;min-height:376px;padding:30px;background:#fff;border:1px solid var(--line-light);border-radius:24px;box-shadow:var(--shadow-card);transition:transform .25s ease,box-shadow .25s ease}
+.feature:hover{transform:translateY(-5px);box-shadow:0 32px 60px -38px rgba(8,43,27,.45)}
+.feature-icon{display:grid;place-items:center;width:50px;height:50px;margin-bottom:22px;border-radius:15px;background:var(--green-soft);color:var(--green-deep)}
+.feature-icon svg{width:24px;height:24px}
+.feature h3{margin:0 0 8px;font-family:var(--font-display);font-size:1.24rem;letter-spacing:-.025em;font-weight:700}
+.feature p{margin:0;color:var(--muted);font-size:.95rem;line-height:1.65}
+.feature-visual{margin-top:auto;padding-top:28px}
+.mini-save{display:flex;align-items:center;gap:13px;padding:14px 16px;background:#f2fbf6;border:1px solid #d9eee2;border-radius:15px}
+.mini-pin{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:#fff;color:var(--green-deep);box-shadow:0 8px 18px -10px rgba(15,157,88,.5);flex:none}
+.mini-pin svg{width:19px;height:19px}
+.mini-save-copy{display:flex;flex-direction:column;gap:2px;min-width:0}
+.mini-save-copy small{font-size:.59rem;font-weight:800;letter-spacing:.13em;text-transform:uppercase;color:#6e8a7b}
+.mini-save-copy strong{font-size:.79rem;letter-spacing:.015em;color:#17472f;font-variant-numeric:tabular-nums;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.compass-art{display:block;width:150px;height:150px;margin:0 auto}
+.distance-art{text-align:center;padding:7px 0 4px}
+.distance-number{display:block;font-family:var(--font-display);font-size:3.5rem;line-height:1;letter-spacing:-.06em;font-weight:800;color:var(--text)}
+.distance-number span{margin-left:4px;font-size:1.4rem;letter-spacing:-.02em;color:#71858d}
+.distance-caption{display:block;margin-top:8px;font-size:.66rem;font-weight:800;letter-spacing:.13em;text-transform:uppercase;color:#7b8f97}
+.feature-notes{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:30px 0 0;padding:24px 0 0;border-top:1px solid var(--line-light);list-style:none}
+.feature-notes li{display:flex;align-items:center;gap:10px;color:#374b54;font-size:.9rem;font-weight:600}
+.feature-notes svg{width:18px;height:18px;color:var(--green-deep);flex:none}
+.steps-block{margin-top:clamp(52px,7vw,82px);padding-top:clamp(38px,5vw,58px);border-top:1px solid var(--line-light)}
+.steps-head{display:flex;align-items:end;justify-content:space-between;gap:32px;margin-bottom:30px;flex-wrap:wrap}
+.steps-head p{margin:0;max-width:42ch;color:var(--muted);font-size:.97rem}
+.steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.step{position:relative;padding:26px;border:1px solid #dcece3;border-radius:20px;background:linear-gradient(140deg,#f6fcf9,#ebf7f1)}
+.step:not(:last-child)::after{content:"";position:absolute;z-index:2;right:-14px;top:50%;width:9px;height:9px;border-top:2px solid #a9cdbb;border-right:2px solid #a9cdbb;transform:translateY(-50%) rotate(45deg)}
+.step-num{display:block;margin-bottom:20px;font-family:var(--font-display);font-size:.72rem;font-weight:800;letter-spacing:.16em;color:var(--green-deep)}
+.step h3{margin:0 0 7px;font-family:var(--font-display);font-size:1.06rem;letter-spacing:-.02em}
+.step p{margin:0;color:var(--muted);font-size:.9rem;line-height:1.6}
+.screens::before{content:"";position:absolute;inset:-15% 22% auto;height:60%;background:radial-gradient(circle,rgba(60,229,127,.15),transparent 68%);pointer-events:none}
+.screens .container{position:relative}
+.screens-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:start}
+.shot{margin:0;overflow:hidden;border:1px solid rgba(255,255,255,.14);border-radius:26px;background:#0a1822;box-shadow:0 45px 90px -35px rgba(0,0,0,.9);transition:transform .3s ease,border-color .3s ease,box-shadow .3s ease}
+.shot:hover{transform:translateY(-6px);border-color:rgba(60,229,127,.42);box-shadow:0 55px 100px -35px rgba(0,0,0,.95),0 0 70px rgba(60,229,127,.1)}
+.shot:nth-child(2){margin-top:38px}
+.shot:nth-child(3){margin-top:14px}
+.shot img{width:100%;height:auto}
+.use-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(236px,1fr));gap:18px}
+.use-card{padding:28px;background:#fff;border:1px solid var(--line-light);border-radius:22px;box-shadow:var(--shadow-card);transition:transform .25s ease,box-shadow .25s ease}
+.use-card:hover{transform:translateY(-4px);box-shadow:0 30px 56px -38px rgba(8,43,27,.45)}
+.use-icon{display:grid;place-items:center;width:46px;height:46px;margin-bottom:20px;border-radius:14px;background:var(--green-soft);color:var(--green-deep)}
+.use-icon svg{width:22px;height:22px}
+.use-card h3{margin:0 0 8px;font-family:var(--font-display);font-size:1.05rem;letter-spacing:-.025em}
+.use-card p{margin:0;color:var(--muted);font-size:.9rem;line-height:1.65}
+.privacy{position:relative;overflow:hidden;padding:clamp(62px,8vw,100px) 0;background:radial-gradient(760px 420px at 78% 0%,rgba(60,229,127,.16),transparent 68%),linear-gradient(125deg,#061b18 0%,#071522 52%,#0a2230 100%);color:var(--white)}
+.privacy::after{content:"";position:absolute;right:-120px;bottom:-180px;width:420px;height:420px;border:1px solid rgba(60,229,127,.14);border-radius:50%;box-shadow:0 0 0 58px rgba(60,229,127,.025),0 0 0 116px rgba(60,229,127,.02);pointer-events:none}
+.privacy-grid{position:relative;z-index:1;display:grid;grid-template-columns:1fr .92fr;gap:clamp(32px,6vw,76px);align-items:center}
+.privacy h2{margin-bottom:18px}
+.privacy-lead{margin:0;max-width:50ch;color:#afc3cb;font-size:1rem;line-height:1.7}
+.privacy-card{padding:30px;border:1px solid rgba(255,255,255,.13);border-radius:24px;background:rgba(255,255,255,.055);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 40px 80px -45px rgba(0,0,0,.7)}
+.privacy-list{display:grid;gap:17px;margin:0;padding:0;list-style:none}
+.privacy-list li{display:flex;align-items:flex-start;gap:12px;color:#e4f0eb;font-size:.94rem;font-weight:600}
+.privacy-list svg{width:20px;height:20px;margin-top:2px;color:var(--green);flex:none}
+.privacy-note{margin:22px 0 0;padding-top:20px;border-top:1px solid rgba(255,255,255,.11);color:#8ea7b1;font-size:.78rem;line-height:1.65}
+.faq-wrap{display:grid;grid-template-columns:.82fr 1.18fr;gap:clamp(34px,6vw,84px);align-items:start}
+.faq-intro{position:sticky;top:106px}
+.faq-intro h2{margin-bottom:18px}
+.faq-intro p{margin:0;max-width:36ch;color:var(--muted);font-size:1rem}
+.faq-list{display:grid;gap:12px}
+.faq-list details{margin:0;padding:0 22px;border:1px solid var(--line-light);border-radius:16px;background:#fff;transition:border-color .2s,box-shadow .2s}
+.faq-list details[open]{border-color:#c8e3d5;box-shadow:0 22px 44px -34px rgba(8,43,27,.35)}
+.faq-list summary{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:20px 0;list-style:none;cursor:pointer;font-weight:700;font-size:.98rem;color:var(--text)}
+.faq-list summary::-webkit-details-marker{display:none}
+.faq-list summary::after{content:"";width:9px;height:9px;margin-right:4px;border-right:2px solid var(--green-deep);border-bottom:2px solid var(--green-deep);transform:rotate(45deg);transition:transform .2s;flex:none}
+.faq-list details[open] summary::after{transform:rotate(-135deg)}
+.faq-list details p{margin:0;padding:0 0 20px;color:var(--muted);font-size:.93rem;line-height:1.7;max-width:62ch}
+.cta{padding:0 0 clamp(68px,9vw,112px);background:var(--ink)}
+.cta-panel{position:relative;overflow:hidden;display:flex;align-items:center;justify-content:space-between;gap:34px;flex-wrap:wrap;padding:clamp(34px,5vw,58px);border:1px solid rgba(255,255,255,.11);border-radius:32px;background:radial-gradient(620px 320px at 86% -10%,rgba(60,229,127,.23),transparent 70%),linear-gradient(135deg,#0c2833 0%,#0a1b2a 55%,#07151f 100%);box-shadow:0 60px 120px -60px rgba(0,0,0,.9)}
+.cta-panel::after{content:"";position:absolute;right:-80px;top:-120px;width:360px;height:360px;border:1px solid rgba(60,229,127,.16);border-radius:50%;box-shadow:0 0 0 48px rgba(60,229,127,.025),0 0 0 96px rgba(60,229,127,.02);pointer-events:none}
+.cta-icon{position:relative;z-index:1;width:82px;height:82px;border-radius:22px;box-shadow:0 20px 40px -16px rgba(0,0,0,.75);flex:none}
+.cta-copy{position:relative;z-index:1;flex:1 1 360px}
+.cta-copy .kicker{margin-bottom:12px}
+.cta h2{margin-bottom:10px}
+.cta-copy p{margin:0;color:#a9c0c9;font-size:.97rem}
+.cta .btn-play{position:relative;z-index:1;flex:none}
+.site-footer{padding:54px 0 26px;background:#051018;border-top:1px solid rgba(255,255,255,.08)}
+.footer-main{display:grid;grid-template-columns:1.35fr 1fr;gap:48px;padding-bottom:40px}
+.footer-brand p{margin:16px 0 0;max-width:46ch;color:#8da5af;font-size:.9rem;line-height:1.7}
+.footer-nav{display:flex;justify-content:flex-end;gap:clamp(36px,6vw,76px);flex-wrap:wrap}
+.footer-nav h3{margin:0 0 14px;font-size:.7rem;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:#6f8994}
+.footer-nav a{display:block;margin-bottom:10px;color:#c2d4db;font-size:.9rem;text-decoration:none;transition:color .2s}
+.footer-nav a:hover{color:var(--green)}
+.footer-bottom{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:22px;border-top:1px solid rgba(255,255,255,.08);color:#6f8994;font-size:.78rem}
+.footer-bottom p{margin:0}
+@media(min-width:961px){
+  .hero h1 .grad{white-space:nowrap}
+}
+@media(max-width:960px){
+  .hero-grid{grid-template-columns:1fr;padding-bottom:52px}
+  .hero-copy{max-width:720px;margin-inline:auto;text-align:center}
+  .lead{margin-inline:auto}
+  .hero-actions{justify-content:center}
+  .eyebrow{justify-content:center}
+  .hero-visual{min-height:0;margin-top:8px}
+  .hero-trust{justify-content:center}
+  .section-head{grid-template-columns:1fr;align-items:start}
+  .section-intro{justify-self:start;max-width:58ch}
+  .privacy-grid,.faq-wrap{grid-template-columns:1fr}
+  .faq-intro{position:static}
+  .footer-main{grid-template-columns:1fr}
+  .footer-nav{justify-content:flex-start}
+}
+@media(max-width:900px){
+  .nav-links{display:none}
+  .nav .btn-play{margin-left:auto}
+  .screens-grid{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 0 18px;margin-inline:calc((100vw - min(1180px,100vw - 48px))/-2);padding-inline:calc((100vw - min(1180px,100vw - 48px))/2);scrollbar-width:thin;scrollbar-color:#2a6470 transparent}
+  .shot{flex:0 0 min(76vw,360px);margin-top:0!important;scroll-snap-align:center}
+}
+@media(max-width:760px){
+  .container{width:min(1180px,100% - 36px)}
+  .nav{min-height:68px;gap:16px}
+  .brand{font-size:1rem}
+  .brand-icon{width:34px;height:34px}
+  .hero{padding-top:44px}
+  .hero h1{font-size:clamp(2.4rem,10.5vw,3.5rem)}
+  .hero-visual{min-height:0}
+  .hero-phone{width:min(76vw,315px)}
+  .orbit-1{width:420px;height:420px}
+  .orbit-2{width:540px;height:540px}
+  .hero-trust{display:grid;grid-template-columns:1fr 1fr;gap:14px;justify-items:start}
+  .steps-grid{grid-template-columns:1fr}
+  .step:not(:last-child)::after{display:none}
+  .feature-notes{grid-template-columns:1fr;gap:12px}
+  .cta-panel{justify-content:center;text-align:center}
+  .cta-copy{flex-basis:100%}
+  .cta .btn-play{margin-inline:auto}
+  .cta-icon{margin-inline:auto}
+  .footer-bottom{flex-direction:column;align-items:flex-start}
+}
+@media(max-width:520px){
+  .container{width:calc(100% - 32px)}
+  .btn-play{padding:12px 18px}
+  .hero-actions{flex-direction:column;align-items:stretch}
+  .hero-actions .btn-play,.hero-actions .btn-ghost{width:100%}
+  .hero-actions .btn-ghost{justify-content:center}
+  .hero-trust{grid-template-columns:1fr 1fr;justify-items:center;text-align:center}
+  .feature{padding:24px;min-height:0}
+  .section-head h2,.steps-title,.faq-intro h2,.privacy h2,.cta h2{font-size:clamp(1.85rem,8.5vw,2.4rem)}
+  .screens-grid{margin-inline:-16px;padding-inline:16px}
+  .shot{flex-basis:82vw}
+  .cta-panel{padding:28px 22px}
+}
+@media(max-width:360px){
+  .brand span{display:none}
+  .nav .btn-play{padding:10px 13px;font-size:.8rem}
+  .nav .btn-play svg{width:15px;height:15px}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}
 </style>
 </head>
 <body>
-<header>
-  <div class="wrap hero">
-    <div class="hero-copy">
-      <picture>
-        <source srcset="assets/app-icon.webp" type="image/webp">
-        <img class="icon" src="icon.png" alt="ComeBackHERE app icon" width="512" height="512">
-      </picture>
-      <h1>Save a place.<br>Find your way back.</h1>
-      <p class="lead">ComeBackHERE is a simple Android app that saves your GPS location and shows you the direction and distance back to it. Perfect for finding your parked car, campsite or trailhead.</p>
-      <a class="btn" href="https://play.google.com/store/apps/details?id=com.companyname.comebackhere">Get it on Google Play</a>
-      <p class="note">Free to download. Contains ads. No account required.</p>
-    </div>
-    <div class="shots">
-      <picture>
-        <source srcset="assets/ComeBackHere_01_Never_Get_Lost.webp" type="image/webp">
-        <img src="assets/ComeBackHere_01_Never_Get_Lost.png" alt="ComeBackHERE map and compass — Never get lost again" width="1080" height="1920" decoding="async">
-      </picture>
-      <picture>
-        <source srcset="assets/ComeBackHere_02_Remember_Parking.webp" type="image/webp">
-        <img src="assets/ComeBackHere_02_Remember_Parking.png" alt="ComeBackHERE — remember where you parked" width="1080" height="1920" decoding="async">
-      </picture>
-      <picture>
-        <source srcset="assets/ComeBackHere_03_Your_Way_Back.webp" type="image/webp">
-        <img src="assets/ComeBackHere_03_Your_Way_Back.png" alt="ComeBackHERE — your way back, always" width="1080" height="1920" decoding="async">
-      </picture>
-    </div>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="#top" aria-label="ComeBackHERE home">
+      <img class="brand-icon" src="assets/app-icon.webp" alt="" width="38" height="38">
+      <span>ComeBack<span>HERE</span></span>
+    </a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#features">Features</a>
+      <a href="#screens">Screens</a>
+      <a href="#uses">Use cases</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="btn-play compact" href="https://play.google.com/store/apps/details?id=com.companyname.comebackhere">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 5.14v13.72c0 .8.87 1.3 1.56.9l11.02-6.86a1.05 1.05 0 0 0 0-1.8L9.56 4.24A1.05 1.05 0 0 0 8 5.14Z" fill="currentColor"/></svg>
+      <span>Google Play</span>
+    </a>
   </div>
 </header>
-<main class="wrap">
-  <section>
-    <h2>One job, done simply</h2>
-    <ul class="checks">
-      <li>Save your current GPS location</li>
-      <li>See the direction to your saved point</li>
-      <li>Check the distance to your destination</li>
-      <li>Use GPS to help navigate back</li>
-      <li>Simple, easy-to-use interface</li>
-      <li>No account required</li>
-    </ul>
-  </section>
-  <section>
-    <h2>When it helps</h2>
-    <div class="grid">
-      <div class="card"><h3>Finding your parked car</h3><p>Save your parking spot in a large car park or an unfamiliar city and walk back to it without guessing.</p></div>
-      <div class="card"><h3>Hiking and walks</h3><p>Save your starting point before heading into a forest or onto a new trail, then find your way back to it.</p></div>
-      <div class="card"><h3>Camping and meeting points</h3><p>Mark a campsite, hotel, festival meeting point or any other place you want to revisit.</p></div>
-      <div class="card"><h3>Exploring somewhere new</h3><p>Keep a reference point for your accommodation or a landmark so you can return to it later.</p></div>
+
+<main id="main">
+  <section class="hero" id="top">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> Android app · Free · No account</p>
+        <h1>Save your spot.<br><span class="grad">Find your way back.</span></h1>
+        <p class="lead">ComeBackHERE saves your current GPS location and points you straight back to it. Perfect for a parked car, a campsite, a trailhead — or anywhere you don't want to lose.</p>
+        <div class="hero-actions">
+          <a class="btn-play" href="https://play.google.com/store/apps/details?id=com.companyname.comebackhere">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 5.14v13.72c0 .8.87 1.3 1.56.9l11.02-6.86a1.05 1.05 0 0 0 0-1.8L9.56 4.24A1.05 1.05 0 0 0 8 5.14Z" fill="currentColor"/></svg>
+            <span class="play-label"><small>Get it on</small><strong>Google Play</strong></span>
+          </a>
+          <a class="btn-ghost" href="#features">See what it does
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+        <p class="micro">Free to download <span>·</span> Contains ads <span>·</span> No sign-up</p>
+      </div>
+      <div class="hero-visual">
+        <div class="orbit orbit-1" aria-hidden="true"></div>
+        <div class="orbit orbit-2" aria-hidden="true"></div>
+        <div class="hero-phone">
+          <picture>
+            <source srcset="assets/screen-hero.webp" type="image/webp">
+            <img src="assets/screen-hero.png" alt="ComeBackHERE app showing a compass, the distance to a saved point and a button to save the current location" width="742" height="1671" fetchpriority="high" decoding="async">
+          </picture>
+        </div>
+      </div>
+    </div>
+    <div class="container hero-trust">
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M10 18h4"/></svg> Android app</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v12m0 0 4-4m-4 4-4-4"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg> Free to download</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="4"/><path d="M5.5 21a6.5 6.5 0 0 1 13 0"/><path d="m17 3 4 4m0-4-4 4"/></svg> No account required</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3 4.5 6v5.5c0 4.4 3.1 7.7 7.5 9.5 4.4-1.8 7.5-5.1 7.5-9.5V6L12 3Z"/><path d="m9 12 2 2 4-4"/></svg> Saved on your device</span>
     </div>
   </section>
-  <section>
-    <h2>Private by design</h2>
-    <div class="card"><p>ComeBackHERE does not require an account. Your saved location stays on your device. According to the Google Play data safety section, the developer declares that no data is shared with third parties and no data is collected.</p></div>
-  </section>
-  <section>
-    <h2>Questions</h2>
-    <div class="faq">
-      <details><summary>Is ComeBackHERE free?</summary><p>Yes. The app is free to download and contains ads. There is no subscription mentioned on its Google Play listing.</p></details>
-      <details><summary>Do I need to create an account?</summary><p>No. The app is designed to work without an account, and saved locations stay on your device.</p></details>
-      <details><summary>Does it replace a navigation app?</summary><p>No. ComeBackHERE focuses on saving a point and showing the direction and distance back to it. Use your preferred navigation app for turn-by-turn road directions.</p></details>
-      <details><summary>What can I save?</summary><p>Any location you may want to return to: a parking spot, campsite, hotel, meeting point, trailhead or landmark.</p></details>
+
+  <section class="section section-white" id="features">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="kicker">Simple by design</p>
+          <h2>One job, done simply.</h2>
+        </div>
+        <p class="section-intro">No maps to configure, no accounts, no clutter. Just the essentials for getting back to where you started.</p>
+      </div>
+      <div class="features-grid">
+        <article class="feature">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 5.5-8 11-8 11s-8-5.5-8-11a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.8"/></svg>
+          </div>
+          <h3>Save any spot</h3>
+          <p>Tap once to store your current GPS position, whether you are leaving the car, the tent or the trailhead.</p>
+          <div class="feature-visual">
+            <div class="mini-save">
+              <span class="mini-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 5.5-8 11-8 11s-8-5.5-8-11a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.8"/></svg></span>
+              <span class="mini-save-copy"><small>Your HERE point</small><strong>51.324266, 16.658904</strong></span>
+            </div>
+          </div>
+        </article>
+        <article class="feature">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2.1 4.9-4.9 2.1 2.1-4.9 4.9-2.1Z"/></svg>
+          </div>
+          <h3>Follow the compass</h3>
+          <p>See which way to go. The compass points toward your saved point as you walk, so you can keep your bearings.</p>
+          <div class="feature-visual">
+            <svg class="compass-art" viewBox="0 0 140 140" aria-hidden="true" focusable="false">
+              <circle cx="70" cy="70" r="57" fill="none" stroke="#c9e7d8" stroke-width="2"/>
+              <circle cx="70" cy="70" r="41" fill="none" stroke="#d9eee3" stroke-width="1.5" stroke-dasharray="3 6"/>
+              <path d="M70 11v8M70 121v8M11 70h8M121 70h8M29 29l6 6M111 29l-6 6M29 111l6-6M111 111l-6-6" fill="none" stroke="#a9cfbb" stroke-width="2" stroke-linecap="round"/>
+              <path d="M70 26 82 61 70 53 58 61 70 26Z" fill="#0b7c47"/>
+              <path d="M70 114 58 79 70 87 82 79 70 114Z" fill="#c6ded2"/>
+              <circle cx="70" cy="70" r="4.5" fill="#0b7c47"/>
+            </svg>
+          </div>
+        </article>
+        <article class="feature">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 8V5a1 1 0 0 1 1-1h3M16 4h3a1 1 0 0 1 1 1v3M20 16v3a1 1 0 0 1-1 1h-3M8 20H5a1 1 0 0 1-1-1v-3"/><path d="m8 15 8-6M8 9l8 6"/></svg>
+          </div>
+          <h3>Know the distance</h3>
+          <p>A clear distance readout tells you exactly how far you are from your target, in metres or kilometres.</p>
+          <div class="feature-visual">
+            <div class="distance-art">
+              <span class="distance-number">17<span>m</span></span>
+              <span class="distance-caption">Distance to destination</span>
+            </div>
+          </div>
+        </article>
+      </div>
+      <ul class="feature-notes">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 4.5 4.5L19 7"/></svg> Simple, easy-to-use interface</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 4.5 4.5L19 7"/></svg> Uses GPS to guide you back</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 4.5 4.5L19 7"/></svg> No account required</li>
+      </ul>
+      <div class="steps-block">
+        <div class="steps-head">
+          <div>
+            <p class="kicker">How it works</p>
+            <h2 class="steps-title">Save. Wander. Return.</h2>
+          </div>
+          <p>Three simple steps between you and the place you want to get back to.</p>
+        </div>
+        <div class="steps-grid">
+          <div class="step">
+            <span class="step-num">STEP 01</span>
+            <h3>Set your point</h3>
+            <p>Open the app and save your current location with one tap.</p>
+          </div>
+          <div class="step">
+            <span class="step-num">STEP 02</span>
+            <h3>Head out</h3>
+            <p>Park, hike, camp or explore. Your saved spot stays with you.</p>
+          </div>
+          <div class="step">
+            <span class="step-num">STEP 03</span>
+            <h3>Follow it back</h3>
+            <p>Use the compass direction and distance to return to your point.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
+
+  <section class="section section-dark screens" id="screens">
+    <div class="container">
+      <div class="section-head section-head-light">
+        <div>
+          <p class="kicker kicker-light">A closer look</p>
+          <h2>Designed to be understood at a glance.</h2>
+        </div>
+        <p class="section-intro">Just a compass, a distance and one button to save your point. That is the whole idea.</p>
+      </div>
+      <div class="screens-grid">
+        <figure class="shot">
+          <picture>
+            <source srcset="assets/ComeBackHere_01_Never_Get_Lost.webp" type="image/webp">
+            <img src="assets/ComeBackHere_01_Never_Get_Lost.png" alt="ComeBackHERE map and compass — never get lost again" width="1080" height="1920" loading="lazy" decoding="async">
+          </picture>
+        </figure>
+        <figure class="shot">
+          <picture>
+            <source srcset="assets/ComeBackHere_02_Remember_Parking.webp" type="image/webp">
+            <img src="assets/ComeBackHere_02_Remember_Parking.png" alt="ComeBackHERE — remember where you parked" width="1080" height="1920" loading="lazy" decoding="async">
+          </picture>
+        </figure>
+        <figure class="shot">
+          <picture>
+            <source srcset="assets/ComeBackHere_03_Your_Way_Back.webp" type="image/webp">
+            <img src="assets/ComeBackHere_03_Your_Way_Back.png" alt="ComeBackHERE — your way back, always" width="1080" height="1920" loading="lazy" decoding="async">
+          </picture>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-light" id="uses">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="kicker">Where it helps</p>
+          <h2>Made for the moments you wander off.</h2>
+        </div>
+        <p class="section-intro">A saved point is a small thing that saves a lot of worry. Here are a few of the everyday places it comes in handy.</p>
+      </div>
+      <div class="use-grid">
+        <article class="use-card">
+          <div class="use-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 16 1.2-4.5A2 2 0 0 1 8.1 10h7.8a2 2 0 0 1 1.9 1.5L19 16"/><path d="M4 16h16v3a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-1H7v1a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-3Z"/><circle cx="7.5" cy="16" r=".6" fill="currentColor"/><circle cx="16.5" cy="16" r=".6" fill="currentColor"/></svg>
+          </div>
+          <h3>Finding your parked car</h3>
+          <p>Save your space in a busy car park or an unfamiliar city and walk straight back to it without guessing.</p>
+        </article>
+        <article class="use-card">
+          <div class="use-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m3 20 6-14 4 9 2-4 6 9H3Z"/><path d="m9 6 1.4 3.2"/></svg>
+          </div>
+          <h3>Hiking and walks</h3>
+          <p>Mark the trailhead before you set off, then find your starting point again on the way back.</p>
+        </article>
+        <article class="use-card">
+          <div class="use-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3 3 21h18L12 3Z"/><path d="M12 10v5"/><path d="M12 18h.01"/></svg>
+          </div>
+          <h3>Camping and meeting points</h3>
+          <p>Keep a fix on your campsite, hotel or festival meeting point — even after a long day out.</p>
+        </article>
+        <article class="use-card">
+          <div class="use-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 21h18"/><path d="M5 21V10l7-5 7 5v11"/><path d="M9 21v-6h6v6"/><path d="M12 5V2"/></svg>
+          </div>
+          <h3>Exploring somewhere new</h3>
+          <p>Drop a pin at your accommodation or a landmark so you can always return to it later.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="privacy">
+    <div class="container privacy-grid">
+      <div>
+        <p class="kicker kicker-light">Private by design</p>
+        <h2>Your location stays yours.</h2>
+        <p class="privacy-lead">ComeBackHERE is built to work without an account. The place you save is stored on your device, so getting back to it does not require signing in.</p>
+      </div>
+      <div class="privacy-card">
+        <ul class="privacy-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 4.5 4.5L19 7"/></svg> No account or sign-up</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 4.5 4.5L19 7"/></svg> Saved locations stay on your device</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 4.5 4.5L19 7"/></svg> No data shared with third parties</li>
+        </ul>
+        <p class="privacy-note">According to the Google Play data safety section, the developer declares that no data is collected and no data is shared with third parties.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-light" id="faq">
+    <div class="container faq-wrap">
+      <div class="faq-intro">
+        <p class="kicker">FAQ</p>
+        <h2>Questions, answered.</h2>
+        <p>A few quick answers before you head out. The app is intentionally simple, just like the idea behind it.</p>
+      </div>
+      <div class="faq-list">
+        <details>
+          <summary>Is ComeBackHERE free?</summary>
+          <p>Yes. The app is free to download and contains ads. There is no subscription mentioned on its Google Play listing.</p>
+        </details>
+        <details>
+          <summary>Do I need to create an account?</summary>
+          <p>No. The app is designed to work without an account, and saved locations stay on your device.</p>
+        </details>
+        <details>
+          <summary>Does it replace a navigation app?</summary>
+          <p>No. ComeBackHERE focuses on saving a point and showing the direction and distance back to it. Use your preferred navigation app for turn-by-turn road directions.</p>
+        </details>
+        <details>
+          <summary>What can I save?</summary>
+          <p>Any location you may want to return to: a parking spot, campsite, hotel, meeting point, trailhead or landmark.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
   <section class="cta">
-    <div><h2>Save your spot. Explore freely.</h2><p>Download ComeBackHERE from Google Play.</p></div>
-    <a class="btn" href="https://play.google.com/store/apps/details?id=com.companyname.comebackhere">Open Google Play</a>
+    <div class="container">
+      <div class="cta-panel">
+        <img class="cta-icon" src="assets/app-icon.webp" alt="ComeBackHERE app icon" width="512" height="512" loading="lazy" decoding="async">
+        <div class="cta-copy">
+          <p class="kicker kicker-light">Ready when you are</p>
+          <h2>Save your spot. Explore freely.</h2>
+          <p>Download ComeBackHERE from Google Play.</p>
+        </div>
+        <a class="btn-play large" href="https://play.google.com/store/apps/details?id=com.companyname.comebackhere">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 5.14v13.72c0 .8.87 1.3 1.56.9l11.02-6.86a1.05 1.05 0 0 0 0-1.8L9.56 4.24A1.05 1.05 0 0 0 8 5.14Z" fill="currentColor"/></svg>
+          <span class="play-label"><small>Get it on</small><strong>Google Play</strong></span>
+        </a>
+      </div>
+    </div>
   </section>
 </main>
-<footer>
-  <div class="wrap">
-    <p>ComeBackHERE: Find My Spot is developed by DevTrollo (Piotr Serafin). This page is published by the app's developer to present the app. Contact: <a href="mailto:devtrollo@gmail.com">devtrollo@gmail.com</a> · <a href="https://piotrse.github.io/ComeBackHERE-Privacy/">Privacy policy</a></p>
+
+<footer class="site-footer">
+  <div class="container footer-main">
+    <div class="footer-brand">
+      <a class="brand" href="#top" aria-label="ComeBackHERE home">
+        <img class="brand-icon" src="assets/app-icon.webp" alt="" width="38" height="38" loading="lazy" decoding="async">
+        <span>ComeBack<span>HERE</span></span>
+      </a>
+      <p>ComeBackHERE: Find My Spot is developed by DevTrollo (Piotr Serafin). This page is published by the app's developer to present the app.</p>
+    </div>
+    <nav class="footer-nav" aria-label="Footer navigation">
+      <div>
+        <h3>Explore</h3>
+        <a href="#features">Features</a>
+        <a href="#screens">Screens</a>
+        <a href="#uses">Use cases</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div>
+        <h3>Information</h3>
+        <a href="https://piotrse.github.io/ComeBackHERE-Privacy/">Privacy policy</a>
+        <a href="mailto:devtrollo@gmail.com">Contact</a>
+        <a href="sitemap.xml">Sitemap</a>
+      </div>
+    </nav>
+  </div>
+  <div class="container footer-bottom">
+    <p>© 2026 ComeBackHERE · Developed by DevTrollo</p>
     <p>Google Play and the Google Play logo are trademarks of Google LLC.</p>
   </div>
 </footer>
