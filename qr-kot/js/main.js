@@ -39,14 +39,56 @@
         }
     }
 
+    /*
+     * Builds the public URL for the selected language.
+     * EN is the default URL; PL and PT-BR use the lang query parameter.
+     */
+    function getLanguageUrl(lang) {
+        var url = new URL(window.location.href);
+        url.search = '';
+        url.hash = '';
+
+        if (lang !== defaultLang) {
+            url.searchParams.set('lang', lang);
+        }
+
+        return url.toString();
+    }
+
+    function updateSeoUrls(lang) {
+        var languageUrl;
+
+        try {
+            languageUrl = getLanguageUrl(lang);
+        } catch (error) {
+            return;
+        }
+
+        var canonical = document.getElementById('canonical-url') ||
+            document.querySelector('link[rel="canonical"]');
+
+        if (canonical) {
+            canonical.setAttribute('href', languageUrl);
+        }
+
+        var ogUrl = document.getElementById('og-url') ||
+            document.querySelector('meta[property="og:url"]');
+
+        if (ogUrl) {
+            ogUrl.setAttribute('content', languageUrl);
+        }
+    }
+
     function updateUrl(lang) {
         try {
             var url = new URL(window.location.href);
+
             if (lang === defaultLang) {
                 url.searchParams.delete('lang');
             } else {
                 url.searchParams.set('lang', lang);
             }
+
             window.history.replaceState({}, '', url.toString());
         } catch (error) {
             /* Ignore environments where history updates are restricted. */
@@ -64,11 +106,15 @@
         if (!menuToggle || !menuToggleLabel) {
             return;
         }
+
         var dict = translations[currentLang] || translations[defaultLang];
         var isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
         var label = dict[isOpen ? 'nav.close' : 'nav.menu'];
-        menuToggleLabel.textContent = label;
-        menuToggle.setAttribute('aria-label', label);
+
+        if (label) {
+            menuToggleLabel.textContent = label;
+            menuToggle.setAttribute('aria-label', label);
+        }
     }
 
     function applyLanguage(lang, options) {
@@ -127,6 +173,12 @@
 
         setMenuLabel();
 
+        /*
+         * Keep canonical and Open Graph URLs aligned with the selected
+         * language, including on the initial page load.
+         */
+        updateSeoUrls(lang);
+
         if (settings.persist !== false) {
             saveLanguage(lang);
         }
@@ -148,6 +200,7 @@
         if (!nav || !menuToggle) {
             return;
         }
+
         nav.classList.toggle('is-open', isOpen);
         menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
         setMenuLabel();
@@ -168,9 +221,11 @@
             if (menuToggle.getAttribute('aria-expanded') !== 'true') {
                 return;
             }
+
             if (event.target.closest('.header-actions')) {
                 return;
             }
+
             if (!nav.contains(event.target)) {
                 setMenuState(false);
             }
@@ -184,11 +239,13 @@
         });
 
         var desktopQuery = window.matchMedia('(min-width: 961px)');
+
         var handleDesktopChange = function (event) {
             if (event.matches) {
                 setMenuState(false);
             }
         };
+
         if (typeof desktopQuery.addEventListener === 'function') {
             desktopQuery.addEventListener('change', handleDesktopChange);
         } else if (typeof desktopQuery.addListener === 'function') {
@@ -209,7 +266,10 @@
                     observer.unobserve(entry.target);
                 }
             });
-        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+        }, {
+            threshold: 0.12,
+            rootMargin: '0px 0px -40px 0px'
+        });
 
         revealItems.forEach(function (item) {
             observer.observe(item);
@@ -230,10 +290,13 @@
 
     var urlLang = readUrlLanguage();
     var storedLang = readStoredLanguage();
-    var initialLang = isSupported(urlLang) ? urlLang : (isSupported(storedLang) ? storedLang : defaultLang);
+
+    var initialLang = isSupported(urlLang) ? urlLang :
+        (isSupported(storedLang) ? storedLang : defaultLang);
 
     applyLanguage(initialLang, {
         persist: isSupported(storedLang),
         updateUrl: false
     });
+
 })();
