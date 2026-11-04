@@ -1,0 +1,52 @@
+{
+  "site_url": "https://piotrse.github.io/qr-kot/",
+  "site_name": "QR Kot - QR Code Studio",
+  "url_mode": "query",
+  "language_query_param": "lang",
+  "languages": [
+    {
+      "code": "en",
+      "path": "",
+      "query_value": ""
+    },
+    {
+      "code": "pl",
+      "path": "",
+      "query_value": "pl"
+    },
+    {
+      "code": "pt-BR",
+      "path": "",
+      "query_value": "pt-BR"
+    }
+  ],
+  "pages": [
+    {
+      "path": "index.html",
+      "url_path": "",
+      "languages": [
+        "en",
+        "pl",
+        "pt-BR"
+      ],
+      "change_frequency": "weekly",
+      "priority": "1.0"
+    },
+    {
+      "path": "privacy.html",
+      "url_path": "privacy.html",
+      "languages": [
+        "en"
+      ],
+      "change_frequency": "yearly",
+      "priority": "0.4"
+    }
+  ],
+  "generate_sitemap": true,
+  "generate_robots": false,
+  "update_html_head": false,
+  "html_files": [],
+  "robots_extra": [],
+  "change_frequency": "weekly",
+  "priority": "1.0"
+}
