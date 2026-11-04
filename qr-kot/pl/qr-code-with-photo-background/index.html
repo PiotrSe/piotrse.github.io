@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jak zrobić kod QR na własnym zdjęciu? | QR Kot</title>
+  <meta name="description" content="Dowiedz się, jak umieścić kod QR na własnym zdjęciu. Wybierz obraz, ustaw i zmień rozmiar kodu, a następnie przetestuj i udostępnij grafikę w QR Kot.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://piotrse.github.io/qr-kot/pl/qr-code-with-photo-background/">
+  <link rel="alternate" hreflang="en" href="https://piotrse.github.io/qr-kot/qr-code-with-photo-background/">
+  <link rel="alternate" hreflang="pl" href="https://piotrse.github.io/qr-kot/pl/qr-code-with-photo-background/">
+  <link rel="alternate" hreflang="pt-BR" href="https://piotrse.github.io/qr-kot/pt-br/qr-code-with-photo-background/">
+  <link rel="alternate" hreflang="x-default" href="https://piotrse.github.io/qr-kot/qr-code-with-photo-background/">
+  <meta name="theme-color" content="#ffd21e">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="QR Kot">
+  <meta property="og:title" content="Jak zrobić kod QR na własnym zdjęciu? | QR Kot">
+  <meta property="og:description" content="Dowiedz się, jak umieścić kod QR na własnym zdjęciu. Wybierz obraz, ustaw i zmień rozmiar kodu, a następnie przetestuj i udostępnij grafikę w QR Kot.">
+  <meta property="og:url" content="https://piotrse.github.io/qr-kot/pl/qr-code-with-photo-background/">
+  <meta property="og:image" content="https://piotrse.github.io/qr-kot/assets/optimized/beach-custom-1400.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="../../assets/optimized/app-icon-32.png">
+  <link rel="stylesheet" href="../../css/styles.css">
+  <style>
+    .guide-wrap{padding-bottom:5rem} .guide-breadcrumb{padding:1.15rem 0;color:var(--muted);font-size:.9rem}
+    .guide-breadcrumb a{color:inherit;text-decoration:none} .guide-hero{padding:3rem 0 4.5rem;background:linear-gradient(180deg,var(--cream) 0%,#fff 100%)}
+    .guide-hero-grid{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,.98fr);gap:3.5rem;align-items:center}
+    .guide-kicker{display:inline-flex;align-items:center;gap:.65rem;color:#8a6500;font-size:.78rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+    .guide-kicker:before{content:"";width:28px;height:3px;background:var(--yellow)}
+    .guide-title{font-size:clamp(2.5rem,5.2vw,4.5rem);line-height:1.04;letter-spacing:-.055em;margin:1rem 0 1.3rem;max-width:14ch}
+    .guide-title .accent{box-shadow:inset 0 -.22em 0 var(--yellow)}
+    .guide-intro{font-size:1.12rem;line-height:1.8;color:var(--muted);max-width:60ch}
+    .guide-actions{display:flex;gap:.8rem;align-items:center;flex-wrap:wrap;margin-top:1.7rem}
+    .guide-visual img{display:block;width:100%;border-radius:24px;box-shadow:var(--shadow-strong)}
+    .guide-caption{font-size:.82rem;color:var(--muted);margin:.8rem .2rem 0}
+    .guide-main{display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:4rem;padding-top:4.5rem}
+    .guide-article{min-width:0} .guide-article section{padding:0 0 2.7rem;margin:0 0 2.7rem;border-bottom:1px solid var(--line);scroll-margin-top:100px}
+    .guide-article h2{font-size:clamp(1.7rem,3vw,2.35rem);line-height:1.15;letter-spacing:-.035em;margin:0 0 1rem}
+    .guide-article h3{font-size:1.2rem;margin:1.6rem 0 .5rem}
+    .guide-article p,.guide-article li{font-size:1.04rem;line-height:1.85;color:var(--muted)}
+    .guide-article ul,.guide-article ol{padding-left:1.35rem;margin:1rem 0} .guide-article li{padding-left:.25rem;margin:.35rem 0}
+    .guide-note{padding:1.25rem 1.4rem;border-left:4px solid var(--yellow);background:var(--cream);border-radius:0 14px 14px 0;margin:1.5rem 0}
+    .guide-note p{margin:0} .guide-steps{display:grid;gap:1rem;margin:1.5rem 0}
+    .guide-step{display:grid;grid-template-columns:48px 1fr;gap:1rem;padding:1.25rem;background:#fff;border:1px solid var(--line);border-radius:16px}
+    .guide-step-num{display:grid;place-items:center;width:42px;height:42px;border-radius:13px;background:var(--yellow-soft);font-weight:850;color:var(--ink)}
+    .guide-step h3{margin:.1rem 0 .35rem} .guide-step p{margin:0}
+    .guide-toc{position:sticky;top:105px;align-self:start;padding:1.25rem;background:var(--cream);border:1px solid var(--line);border-radius:18px}
+    .guide-toc strong{display:block;margin-bottom:.8rem} .guide-toc a{display:block;padding:.42rem 0;color:var(--muted);font-size:.91rem;text-decoration:none}
+    .guide-checks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.8rem;margin:1.2rem 0}
+    .guide-check{padding:1rem 1.1rem;border:1px solid var(--line);border-radius:14px;background:#fff}
+    .guide-check b{display:block;margin-bottom:.25rem} .guide-check span{font-size:.92rem;color:var(--muted);line-height:1.6}
+    .guide-faq details{padding:1rem 0;border-bottom:1px solid var(--line)} .guide-faq summary{cursor:pointer;font-weight:750;line-height:1.5}
+    .guide-faq details p{margin:.7rem 0 0}
+    .guide-cta{margin:1rem 0 0;padding:3rem 2rem;text-align:center;background:var(--ink);color:#fff;border-radius:24px}
+    .guide-cta h2{font-size:clamp(1.8rem,3vw,2.5rem);margin-bottom:.8rem} .guide-cta p{max-width:620px;margin:0 auto 1.5rem;color:#d3d0c7;line-height:1.8}
+    .guide-cta .btn{color:var(--black)} .guide-footer-links{display:flex;gap:1.2rem;flex-wrap:wrap;margin-top:1rem;justify-content:center}
+    .guide-footer-links a{color:#c7c3b8;font-size:.9rem}
+    @media(max-width:900px){.guide-hero-grid{grid-template-columns:1fr;gap:2rem}.guide-visual{max-width:680px}.guide-main{grid-template-columns:1fr;gap:1rem}.guide-toc{position:static;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 .8rem}.guide-toc strong{grid-column:1/-1}}
+    @media(max-width:620px){.guide-hero{padding:2rem 0 3rem}.guide-title{font-size:clamp(2.35rem,11vw,3.4rem)}.guide-intro{font-size:1.02rem}.guide-main{padding-top:2.7rem}.guide-checks{grid-template-columns:1fr}.guide-cta{padding:2.2rem 1.2rem}}
+  </style>
+  <script type="application/ld+json">{
+      "@context":"https://schema.org",
+      "@graph":[
+        {"@type":"Article","headline":"Kod QR na własnym zdjęciu – jak go utworzyć","description":"Praktyczny poradnik tworzenia kodu QR na własnym zdjęciu, ustawiania jego położenia i sprawdzania, czy można go zeskanować.","image":"https://piotrse.github.io/qr-kot/assets/optimized/beach-custom-1400.webp","mainEntityOfPage":"https://piotrse.github.io/qr-kot/pl/qr-code-with-photo-background/","author":{"@type":"Organization","name":"QR Kot"},"publisher":{"@type":"Organization","name":"QR Kot"},"inLanguage":"pl"},
+        {"@type":"SoftwareApplication","name":"QR Kot","applicationCategory":"UtilitiesApplication","operatingSystem":"Android","url":"https://piotrse.github.io/qr-kot/","downloadUrl":"https://play.google.com/store/apps/details?id=com.devtrollo.qrmiauuu","offers":{"@type":"Offer","price":"0","priceCurrency":"PLN"}},
+        {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"QR Kot","item":"https://piotrse.github.io/qr-kot/"},{"@type":"ListItem","position":2,"name":"**Kod QR na własnym zdjęciu**","item":"https://piotrse.github.io/qr-kot/pl/qr-code-with-photo-background/"}]}
+      ]
+    }</script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Przejdź do treści</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../../?lang=pl" aria-label="QR Kot">
+        <img class="brand-icon" src="../../assets/optimized/app-icon-180.webp" width="40" height="40" alt="QR Kot">
+        <span class="brand-name">QR Kot</span>
+      </a>
+      <nav class="nav" aria-label="Main navigation">
+        <a class="nav-link" href="../../?lang=pl">Strona główna</a>
+        <a class="nav-link" href="../../?lang=pl#features">Funkcje</a>
+        <a class="nav-link" href="../../?lang=pl#privacy">Prywatność</a>
+        <a class="btn btn-primary btn-sm nav-download" href="https://play.google.com/store/apps/details?id=com.devtrollo.qrmiauuu" target="_blank" rel="noopener noreferrer">Pobierz aplikację</a>
+      </nav>
+      <div class="header-actions guide-languages" aria-label="Language">
+        <a class="lang-btn" href="https://piotrse.github.io/qr-kot/qr-code-with-photo-background/" lang="en">EN</a><a class="lang-btn is-active" href="https://piotrse.github.io/qr-kot/pl/qr-code-with-photo-background/" lang="pl" aria-current="page">PL</a><a class="lang-btn " href="https://piotrse.github.io/qr-kot/pt-br/qr-code-with-photo-background/" lang="pt-BR" >PT-BR</a>
+      </div>
+    </div>
+  </header>
+  <main id="main" class="guide-wrap">
+    <div class="container guide-breadcrumb"><a href="../../?lang=pl">Strona główna</a> / <span>**Kod QR na własnym zdjęciu**</span></div>
+    <section class="guide-hero"><div class="container guide-hero-grid">
+      <div><span class="guide-kicker">Praktyczny poradnik QR Kot</span><h1 class="guide-title">Kod QR na <span class="accent">własnym zdjęciu</span></h1>
+        <p class="guide-intro">Kod QR może być czymś więcej niż odnośnikiem do strony. Umieść go na zdjęciu i przygotuj grafikę do produktu, wydarzenia, wizytówki lub posta. Zobacz, jak stworzyć taki projekt i zadbać o to, by kod nadal można było łatwo zeskanować.</p>
+        <div class="guide-actions"><a class="btn btn-primary btn-lg" href="https://play.google.com/store/apps/details?id=com.devtrollo.qrmiauuu" target="_blank" rel="noopener noreferrer">Pobierz QR Kot</a><a class="btn btn-secondary btn-lg" href="#how-to">Zobacz instrukcję</a></div>
+      </div>
+      <figure class="guide-visual"><img src="../../assets/optimized/beach-custom-1400.webp" srcset="../../assets/optimized/beach-custom-640.webp 640w, ../../assets/optimized/beach-custom-1400.webp 1400w" sizes="(max-width: 900px) 92vw, 560px" width="1400" height="788" fetchpriority="high" alt="Przykład kodu QR umieszczonego na zdjęciu tropikalnej plaży"><figcaption class="guide-caption">Przykładowa kompozycja kodu QR na tle zdjęcia.</figcaption></figure>
+    </div></section>
+    <div class="container guide-main">
+      <article class="guide-article">
+        <section id="what"><h2>Czym jest kod QR na własnym zdjęciu?</h2>
+<p>To kod QR umieszczony na fotografii, dzięki czemu gotowa grafika łączy funkcję kodu z obrazem, który nadaje jej kontekst. Tłem może być zdjęcie produktu, miejsca, wydarzenia, marki albo dowolna fotografia pasująca do celu, w jakim udostępniasz kod.</p>
+<p>Zdjęcie pełni tu rolę tła wizualnego. Sam wzór QR musi pozostać czytelny — dekoracyjny wygląd nie powinien utrudniać skanowania.</p>
+<div class="guide-note"><p><strong>Warto pamiętać:</strong> samo dodanie zdjęcia nie sprawia, że kod QR staje się skuteczniejszy. Grafika ma sens wtedy, gdy zdjęcie pomaga odbiorcy zrozumieć, co znajdzie po zeskanowaniu kodu.</p></div></section><section id="how-to"><h2>Jak zrobić kod QR na własnym zdjęciu?</h2><p>W QR Kot przygotujesz taką grafikę bezpośrednio na telefonie z Androidem. Proces obejmuje kilka prostych kroków:</p>
+<div class="guide-steps">
+<div class="guide-step"><span class="guide-step-num">01</span><div><h3>Wybierz zdjęcie tła</h3><p>Zrób nowe zdjęcie lub wybierz obraz z galerii telefonu. Najlepiej sprawdzi się fotografia, która pasuje do przeznaczenia kodu i ma miejsce na jego umieszczenie.</p></div></div>
+<div class="guide-step"><span class="guide-step-num">02</span><div><h3>Dodaj i umieść kod QR</h3><p>Nałóż kod QR na wybrane zdjęcie. Przesuń go w miejsce, w którym będzie dobrze widoczny i nie zasłoni ważnych elementów fotografii.</p></div></div>
+<div class="guide-step"><span class="guide-step-num">03</span><div><h3>Dopasuj rozmiar i położenie</h3><p>Zmień wielkość i pozycję kodu, aby kompozycja wyglądała dobrze. Nie zmniejszaj go nadmiernie i unikaj bardzo szczegółowego fragmentu zdjęcia.</p></div></div>
+<div class="guide-step"><span class="guide-step-num">04</span><div><h3>Zapisz, udostępnij i przetestuj</h3><p>Zapisz gotową grafikę i udostępnij ją. Przed drukiem lub szeroką publikacją zeskanuj zapisany obraz drugim urządzeniem.</p></div></div>
+</div><p><a href="https://play.google.com/store/apps/details?id=com.devtrollo.qrmiauuu" target="_blank" rel="noopener noreferrer">QR Kot pobierzesz z Google Play na urządzenia z Androidem.</a></p></section><section id="design"><h2>Jak zaprojektować kod QR, żeby można go było zeskanować?</h2><p>Ładna grafika jest przydatna tylko wtedy, gdy kod działa. Zdjęcia zawierają tekstury, cienie i kolory, które mogą konkurować ze wzorem QR. Dlatego sprawdzaj gotowy plik, a nie tylko podgląd podczas edycji.</p>
+<div class="guide-checks">
+<div class="guide-check"><b>Zadbaj o kontrast</b><span>Wzór QR powinien wyraźnie odróżniać się od fotografii w tle.</span></div>
+<div class="guide-check"><b>Unikaj zatłoczonego tła</b><span>Wybierz spokojniejszy fragment zdjęcia, a nie miejsce pełne drobnych szczegółów.</span></div>
+<div class="guide-check"><b>Zostaw wolną przestrzeń</b><span>Nie przycinaj kodu i nie umieszczaj tekstu ani ozdobników zbyt blisko jego krawędzi.</span></div>
+<div class="guide-check"><b>Przetestuj gotowy plik</b><span>Zeskanuj zapisaną grafikę w docelowym rozmiarze, nie tylko podgląd w edytorze.</span></div>
+</div><p>Jeśli planujesz druk, sprawdź próbny wydruk w rzeczywistym rozmiarze. W przypadku grafiki cyfrowej przetestuj ją na innym telefonie lub ekranie. Gdy skanowanie jest zawodne, zmień położenie, rozmiar albo fragment tła i ponów test.</p></section><section id="ideas"><h2>Gdzie wykorzystać kod QR na zdjęciu?</h2><p>Grafika z kodem QR na fotografii sprawdza się wtedy, gdy obraz pomaga wyjaśnić, dlaczego warto zeskanować kod. Oto kilka przykładów:</p>
+<h3>Produkty i opakowania</h3><p>Umieść kod na zdjęciu produktu, aby kierować klientów do instrukcji, szczegółów produktu lub odpowiedniej strony internetowej. Sprawdź, czy kod pozostaje czytelny w docelowym rozmiarze wydruku.</p>
+<h3>Wydarzenia i zaproszenia</h3><p>Wykorzystaj zdjęcie lub grafikę nawiązującą do wydarzenia. Kod może prowadzić do strony wydarzenia, mapy albo formularza rejestracji.</p>
+<h3>Wizytówki i materiały promocyjne</h3><p>Połącz portret, zdjęcie marki lub grafikę kampanii z kodem prowadzącym do strony kontaktowej albo witryny. Nie przeładowuj projektu dodatkowymi elementami.</p>
+<h3>Media społecznościowe i projekty osobiste</h3><p>Przygotuj grafikę łączącą zdjęcie z linkiem, portfolio lub innym miejscem docelowym. Upewnij się, że kod jest wystarczająco duży dla osób oglądających post na telefonie.</p></section><section id="qr-kot"><h2>Twórz grafiki QR ze zdjęciem w QR Kot</h2><p>QR Kot łączy narzędzia do generowania i skanowania kodów QR w aplikacji na Androida. Przy tworzeniu grafiki ze zdjęciem możesz wybrać obraz z telefonu lub zrobić nowe zdjęcie, umieścić na nim kod QR, dopasować jego pozycję i rozmiar, a następnie zapisać lub udostępnić gotowy obraz.</p>
+<p>Aplikacja pozwala przygotować taką grafikę na telefonie, bez konieczności używania osobnego desktopowego edytora do podstawowych czynności. Poznaj też pozostałe funkcje na <a href="../../?lang=pl">stronie głównej QR Kot</a>.</p></section>
+        <section id="faq" class="guide-faq"><h2>Najczęściej zadawane pytania</h2><details><summary>Czy mogę użyć dowolnego zdjęcia jako tła kodu QR?</summary><p>Możesz wybrać zdjęcie z telefonu, ale nie każde będzie równie dobre. Szukaj fragmentu z odpowiednim kontrastem i wolnym miejscem na kod.</p></details><details><summary>Czy mogę przesuwać i zmieniać rozmiar kodu QR na zdjęciu?</summary><p>Tak. QR Kot pozwala ustawić położenie kodu na wybranym obrazie i dopasować jego rozmiar.</p></details><details><summary>Czy kod QR będzie działał po dodaniu zdjęcia?</summary><p>Może działać, jeśli pozostanie czytelny i będzie miał odpowiedni kontrast. Zawsze zeskanuj zapisaną grafikę. Jeśli skanowanie jest problematyczne, zmień projekt i przetestuj ponownie.</p></details><details><summary>Czy mogę wykorzystać gotowy obraz w druku?</summary><p>Możesz zapisać i udostępnić grafikę, a następnie użyć jej w innych materiałach. Przed drukiem przetestuj próbkę w planowanym rozmiarze. QR Kot nie oferuje usługi drukowania.</p></details><details><summary>Czy QR Kot jest dostępny na iPhone’a?</summary><p>QR Kot jest obecnie dostępny na urządzenia z Androidem w Google Play.</p></details></section>
+        <div class="guide-cta"><h2>Umieść kod QR w swojej grafice</h2><p>Wybierz zdjęcie, ustaw kod i przygotuj własną grafikę QR na telefonie z Androidem przy użyciu QR Kot.</p>
+          <a class="btn btn-primary btn-lg" href="https://play.google.com/store/apps/details?id=com.devtrollo.qrmiauuu" target="_blank" rel="noopener noreferrer">QR Kot – Google Play</a>
+          <div class="guide-footer-links"><a href="../../?lang=pl">QR Kot</a><a href="../../?lang=pl#features">Funkcje</a><a href="../../privacy.html">Polityka prywatności</a></div>
+        </div>
+      </article>
+      <aside class="guide-toc" aria-label="On this page"><strong>Na tej stronie</strong><a href="#what">Czym jest kod QR na zdjęciu?</a><a href="#how-to">Jak utworzyć kod QR?</a><a href="#design">Wskazówki dotyczące skanowania</a><a href="#ideas">Pomysły na zastosowanie</a><a href="#qr-kot">Tworzenie w QR Kot</a><a href="#faq">Najczęstsze pytania</a></aside>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand"><a class="brand brand-footer" href="../../?lang=pl"><img class="brand-icon" src="../../assets/optimized/app-icon-180.webp" width="40" height="40" alt="QR Kot"><span class="brand-name">QR Kot</span></a><p>Generator i skaner kodów QR oraz narzędzia do tworzenia własnych grafik QR na Androida.</p></div>
+      <div class="footer-col"><h2 class="footer-heading">Odkryj</h2><a href="../../?lang=pl">Strona główna</a><a href="../../?lang=pl#features">Funkcje</a><a href="https://play.google.com/store/apps/details?id=com.devtrollo.qrmiauuu">Google Play</a></div>
+      <div class="footer-col"><h2 class="footer-heading">Informacje</h2><a href="../../privacy.html">Polityka prywatności</a><a href="mailto:devtrollo@gmail.com">Kontakt</a></div>
+    </div>
+    <div class="container footer-bottom"><p>© 2026 QR Kot. All rights reserved.</p></div>
+  </footer>
+</body>
+</html>

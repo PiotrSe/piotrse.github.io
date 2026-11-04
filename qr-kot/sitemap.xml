@@ -1,35 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://piotrse.github.io/qr-kot/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://piotrse.github.io/qr-kot/"/>
-    <xhtml:link rel="alternate" hreflang="pl" href="https://piotrse.github.io/qr-kot/?lang=pl"/>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://piotrse.github.io/qr-kot/?lang=pt-BR"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://piotrse.github.io/qr-kot/"/>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://piotrse.github.io/qr-kot/?lang=pl</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://piotrse.github.io/qr-kot/"/>
-    <xhtml:link rel="alternate" hreflang="pl" href="https://piotrse.github.io/qr-kot/?lang=pl"/>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://piotrse.github.io/qr-kot/?lang=pt-BR"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://piotrse.github.io/qr-kot/"/>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <loc>https://piotrse.github.io/qr-kot/qr-code-with-photo-background/</loc>
   </url>
   <url>
-    <loc>https://piotrse.github.io/qr-kot/?lang=pt-BR</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://piotrse.github.io/qr-kot/"/>
-    <xhtml:link rel="alternate" hreflang="pl" href="https://piotrse.github.io/qr-kot/?lang=pl"/>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://piotrse.github.io/qr-kot/?lang=pt-BR"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://piotrse.github.io/qr-kot/"/>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <loc>https://piotrse.github.io/qr-kot/pl/qr-code-with-photo-background/</loc>
   </url>
   <url>
-    <loc>https://piotrse.github.io/qr-kot/privacy.html</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.4</priority>
+    <loc>https://piotrse.github.io/qr-kot/pt-br/qr-code-with-photo-background/</loc>
   </url>
 </urlset>

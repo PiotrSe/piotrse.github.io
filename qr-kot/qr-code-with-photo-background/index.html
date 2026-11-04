@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>QR Code with Photo Background: How to Create One | QR Kot</title>
+  <meta name="description" content="Learn how to create a QR code with a photo background. Choose an image, place and resize your QR code, then test and share your custom design with QR Kot.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://piotrse.github.io/qr-kot/qr-code-with-photo-background/">
+  <link rel="alternate" hreflang="en" href="https://piotrse.github.io/qr-kot/qr-code-with-photo-background/">
+  <link rel="alternate" hreflang="pl" href="https://piotrse.github.io/qr-kot/pl/qr-code-with-photo-background/">
+  <link rel="alternate" hreflang="pt-BR" href="https://piotrse.github.io/qr-kot/pt-br/qr-code-with-photo-background/">
+  <link rel="alternate" hreflang="x-default" href="https://piotrse.github.io/qr-kot/qr-code-with-photo-background/">
+  <meta name="theme-color" content="#ffd21e">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="QR Kot">
+  <meta property="og:title" content="QR Code with Photo Background: How to Create One">
+  <meta property="og:description" content="A practical guide to placing a QR code on your own photo, adjusting the layout and checking that it still scans.">
+  <meta property="og:url" content="https://piotrse.github.io/qr-kot/qr-code-with-photo-background/">
+  <meta property="og:image" content="https://piotrse.github.io/qr-kot/assets/optimized/beach-custom-1400.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="../assets/optimized/app-icon-32.png">
+  <link rel="stylesheet" href="../css/styles.css">
+  <style>
+    .guide-wrap{padding-bottom:5rem}
+    .guide-breadcrumb{padding:1.15rem 0;color:var(--muted);font-size:.9rem}
+    .guide-breadcrumb a{color:inherit;text-decoration:none}
+    .guide-breadcrumb a:hover{text-decoration:underline}
+    .guide-hero{padding:3rem 0 4.5rem;background:linear-gradient(180deg,var(--cream) 0%,#fff 100%)}
+    .guide-hero-grid{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,.98fr);gap:3.5rem;align-items:center}
+    .guide-kicker{display:inline-flex;align-items:center;gap:.65rem;color:#8a6500;font-size:.78rem;font-weight:800;letter-spacing:.15em;text-transform:uppercase}
+    .guide-kicker:before{content:"";width:28px;height:3px;background:var(--yellow)}
+    .guide-title{font-size:clamp(2.5rem,5.2vw,4.5rem);line-height:1.04;letter-spacing:-.055em;margin:1rem 0 1.3rem;max-width:13ch}
+    .guide-title .accent{box-shadow:inset 0 -.22em 0 var(--yellow)}
+    .guide-intro{font-size:1.15rem;line-height:1.8;color:var(--muted);max-width:58ch}
+    .guide-actions{display:flex;gap:.8rem;align-items:center;flex-wrap:wrap;margin-top:1.7rem}
+    .guide-visual{position:relative}
+    .guide-visual img{display:block;width:100%;border-radius:24px;box-shadow:var(--shadow-strong)}
+    .guide-caption{font-size:.82rem;color:var(--muted);margin:.8rem .2rem 0}
+    .guide-main{display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:4rem;padding-top:4.5rem}
+    .guide-article{min-width:0}
+    .guide-article section{padding:0 0 2.7rem;margin:0 0 2.7rem;border-bottom:1px solid var(--line);scroll-margin-top:100px}
+    .guide-article h2{font-size:clamp(1.7rem,3vw,2.35rem);line-height:1.15;letter-spacing:-.035em;margin:0 0 1rem}
+    .guide-article h3{font-size:1.2rem;margin:1.6rem 0 .5rem}
+    .guide-article p,.guide-article li{font-size:1.04rem;line-height:1.85;color:var(--muted)}
+    .guide-article ul,.guide-article ol{padding-left:1.35rem;margin:1rem 0}
+    .guide-article li{padding-left:.25rem;margin:.35rem 0}
+    .guide-note{padding:1.25rem 1.4rem;border-left:4px solid var(--yellow);background:var(--cream);border-radius:0 14px 14px 0;margin:1.5rem 0}
+    .guide-note p{margin:0}
+    .guide-steps{display:grid;gap:1rem;margin:1.5rem 0}
+    .guide-step{display:grid;grid-template-columns:48px 1fr;gap:1rem;padding:1.25rem;background:#fff;border:1px solid var(--line);border-radius:16px}
+    .guide-step-num{display:grid;place-items:center;width:42px;height:42px;border-radius:13px;background:var(--yellow-soft);font-weight:850;color:var(--ink)}
+    .guide-step h3{margin:.1rem 0 .35rem}
+    .guide-step p{margin:0}
+    .guide-toc{position:sticky;top:105px;align-self:start;padding:1.25rem;background:var(--cream);border:1px solid var(--line);border-radius:18px}
+    .guide-toc strong{display:block;margin-bottom:.8rem}
+    .guide-toc a{display:block;padding:.42rem 0;color:var(--muted);font-size:.91rem;text-decoration:none}
+    .guide-toc a:hover{color:var(--ink);text-decoration:underline}
+    .guide-checks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.8rem;margin:1.2rem 0}
+    .guide-check{padding:1rem 1.1rem;border:1px solid var(--line);border-radius:14px;background:#fff}
+    .guide-check b{display:block;margin-bottom:.25rem}
+    .guide-check span{font-size:.92rem;color:var(--muted);line-height:1.6}
+    .guide-faq details{padding:1rem 0;border-bottom:1px solid var(--line)}
+    .guide-faq summary{cursor:pointer;font-weight:750;line-height:1.5}
+    .guide-faq details p{margin:.7rem 0 0}
+    .guide-cta{margin:1rem 0 0;padding:3rem 2rem;text-align:center;background:var(--ink);color:#fff;border-radius:24px}
+    .guide-cta h2{font-size:clamp(1.8rem,3vw,2.5rem);margin-bottom:.8rem}
+    .guide-cta p{max-width:620px;margin:0 auto 1.5rem;color:#d3d0c7;line-height:1.8}
+    .guide-cta .btn{color:var(--black)}
+    .guide-footer-links{display:flex;gap:1.2rem;flex-wrap:wrap;margin-top:1rem}
+    .guide-footer-links a{color:#c7c3b8;font-size:.9rem}
+    @media(max-width:900px){.guide-hero-grid{grid-template-columns:1fr;gap:2rem}.guide-visual{max-width:680px}.guide-main{grid-template-columns:1fr;gap:1rem}.guide-toc{position:static;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 .8rem}.guide-toc strong{grid-column:1/-1}}
+    @media(max-width:620px){.guide-hero{padding:2rem 0 3rem}.guide-title{font-size:clamp(2.45rem,12vw,3.4rem)}.guide-intro{font-size:1.04rem}.guide-main{padding-top:2.7rem}.guide-checks{grid-template-columns:1fr}.guide-cta{padding:2.2rem 1.2rem}.guide-toc{grid-template-columns:1fr 1fr}}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"Article",
+        "headline":"QR Code with Photo Background: How to Create One",
+        "description":"A practical guide to combining a QR code with your own photo, positioning it and checking scan reliability.",
+        "image":"https://piotrse.github.io/qr-kot/assets/optimized/beach-custom-1400.webp",
+        "mainEntityOfPage":"https://piotrse.github.io/qr-kot/qr-code-with-photo-background/",
+        "author":{"@type":"Organization","name":"QR Kot"},
+        "publisher":{"@type":"Organization","name":"QR Kot"}
+      },
+      {
+        "@type":"SoftwareApplication",
+        "name":"QR Kot",
+        "applicationCategory":"UtilitiesApplication",
+        "operatingSystem":"Android",
+        "url":"https://piotrse.github.io/qr-kot/",
+        "downloadUrl":"https://play.google.com/store/apps/details?id=com.devtrollo.qrmiauuu",
+        "offers":{"@type":"Offer","price":"0","priceCurrency":"PLN"}
+      },
+      {
+        "@type":"BreadcrumbList",
+        "itemListElement":[
+          {"@type":"ListItem","position":1,"name":"QR Kot","item":"https://piotrse.github.io/qr-kot/"},
+          {"@type":"ListItem","position":2,"name":"QR Code with Photo Background","item":"https://piotrse.github.io/qr-kot/qr-code-with-photo-background/"}
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../" aria-label="QR Kot home">
+        <img class="brand-icon" src="../assets/optimized/app-icon-180.webp" width="40" height="40" alt="QR Kot app icon">
+        <span class="brand-name">QR Kot</span>
+      </a>
+      <nav class="nav" aria-label="Main navigation">
+        <a class="nav-link" href="../">Home</a>
+        <a class="nav-link" href="../#features">Features</a>
+        <a class="nav-link" href="../#privacy">Privacy</a>
+        <a class="btn btn-primary btn-sm nav-download" href="https://play.google.com/store/apps/details?id=com.devtrollo.qrmiauuu" target="_blank" rel="noopener noreferrer">Get the app</a>
+      </nav>
+      <div class="header-actions guide-languages" aria-label="Choose language">
+        <a class="lang-btn is-active" href="./" lang="en" aria-current="page">EN</a>
+        <a class="lang-btn" href="../pl/qr-code-with-photo-background/" lang="pl">PL</a>
+        <a class="lang-btn" href="../pt-br/qr-code-with-photo-background/" lang="pt-BR">PT-BR</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="guide-wrap">
+    <div class="container guide-breadcrumb"><a href="../">Home</a> / <span>QR Code with Photo Background</span></div>
+
+    <section class="guide-hero">
+      <div class="container guide-hero-grid">
+        <div>
+          <span class="guide-kicker">QR Kot practical guide</span>
+          <h1 class="guide-title">QR Code with <span class="accent">Photo Background</span></h1>
+          <p class="guide-intro">A QR code can do more than point people to a website. Put it on a photo to create a graphic for a product, event, business card or social post. This guide explains how to make the design, where it works well and how to keep the code easy to scan.</p>
+          <div class="guide-actions">
+            <a class="btn btn-primary btn-lg" href="https://play.google.com/store/apps/details?id=com.devtrollo.qrmiauuu" target="_blank" rel="noopener noreferrer">Get QR Kot on Google Play</a>
+            <a class="btn btn-secondary btn-lg" href="#how-to">See how it works</a>
+          </div>
+        </div>
+        <figure class="guide-visual">
+          <img src="../assets/optimized/beach-custom-1400.webp"
+               srcset="../assets/optimized/beach-custom-640.webp 640w, ../assets/optimized/beach-custom-1400.webp 1400w"
+               sizes="(max-width: 900px) 92vw, 560px"
+               width="1400" height="788" fetchpriority="high"
+               alt="Example concept of a QR code combined with a tropical beach photo">
+          <figcaption class="guide-caption">Example concept: a QR code placed over a photo background.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <div class="container guide-main">
+      <article class="guide-article">
+        <section id="what">
+          <h2>What is a QR code with a photo background?</h2>
+          <p>It is a QR code placed on top of an image so the final result works as both a scannable code and a designed graphic. The photo might show a product, a place, an event or a visual that supports the message behind the code.</p>
+          <p>The important distinction is that the photo is part of the visual layout. The QR code still needs a clear, readable pattern. A decorative background should never make scanning the code harder.</p>
+          <div class="guide-note"><p><strong>Good to know:</strong> adding a photo does not automatically make a QR code more effective. The design is useful when the image gives people context and the code remains easy to recognise and scan.</p></div>
+        </section>
+
+        <section id="how-to">
+          <h2>How to create a QR code with your own photo</h2>
+          <p>With QR Kot, you can prepare this kind of graphic on an Android phone. The workflow is straightforward:</p>
+          <div class="guide-steps">
+            <div class="guide-step"><span class="guide-step-num">01</span><div><h3>Choose a background photo</h3><p>Take a new picture or select an image from your phone's gallery. Choose a photo that supports the purpose of the QR code and leaves a suitable area for placing it.</p></div></div>
+            <div class="guide-step"><span class="guide-step-num">02</span><div><h3>Place the QR code</h3><p>Add your QR code to the image. Move it to a position where it is visible and does not cover important details in the photo.</p></div></div>
+            <div class="guide-step"><span class="guide-step-num">03</span><div><h3>Adjust its size and position</h3><p>Resize and reposition the code to balance the composition. Avoid making it too small or placing it over a visually busy part of the image.</p></div></div>
+            <div class="guide-step"><span class="guide-step-num">04</span><div><h3>Save, share and test</h3><p>Save the finished graphic and share it. Before printing or publishing it widely, scan the final exported image with another device.</p></div></div>
+          </div>
+          <p><a href="https://play.google.com/store/apps/details?id=com.devtrollo.qrmiauuu" target="_blank" rel="noopener noreferrer">QR Kot is available on Google Play for Android.</a></p>
+        </section>
+
+        <section id="design">
+          <h2>Design tips: make the QR code easy to scan</h2>
+          <p>A good-looking design is only useful if the QR code works. A photo can contain textures, shadows and colours that compete with the code, so check the finished image rather than judging it only on screen.</p>
+          <div class="guide-checks">
+            <div class="guide-check"><b>Keep strong contrast</b><span>The QR pattern should stand out clearly from the photo behind it.</span></div>
+            <div class="guide-check"><b>Avoid busy areas</b><span>Choose a calmer part of the image instead of placing the code over complex detail.</span></div>
+            <div class="guide-check"><b>Leave enough space</b><span>Do not crop the code or crowd its edges with text and decorative elements.</span></div>
+            <div class="guide-check"><b>Test the final file</b><span>Scan the saved image at its intended size, not only the editing preview.</span></div>
+          </div>
+          <p>For printed materials, test a real print at the size people will see. For digital graphics, test the image on another phone or screen. If scanning is unreliable, change the position, size or background area and test again.</p>
+        </section>
+
+        <section id="ideas">
+          <h2>Where can you use a QR code on a photo?</h2>
+          <p>Photo-background QR graphics can be useful whenever the image helps explain why someone should scan the code. Here are a few practical examples:</p>
+          <h3>Products and packaging</h3>
+          <p>Place a QR code over a product-related image to direct customers to instructions, product details or a relevant webpage. Make sure the code is still clear at the final printed size.</p>
+          <h3>Events and invitations</h3>
+          <p>Use an event photo or themed image as the background. The QR code might lead to an event page, a map or registration details.</p>
+          <h3>Business cards and promotional graphics</h3>
+          <p>Combine a portrait, brand image or campaign visual with a code that links to a contact page or website. Keep the design uncluttered so the code remains easy to find.</p>
+          <h3>Social media and personal projects</h3>
+          <p>Create a graphic that pairs a photo with a link, portfolio or other destination. Check that the code is large enough for people viewing the post on a phone.</p>
+        </section>
+
+        <section id="qr-kot">
+          <h2>Create your photo QR graphic with QR Kot</h2>
+          <p>QR Kot brings QR code creation and scanning tools together in an Android app. For a photo-based graphic, you can select an image from your phone or take a new one, place a QR code over it, adjust the code's position and size, then save or share the result.</p>
+          <p>The app is designed for creating and handling QR graphics on your phone, without needing a separate desktop graphics editor for this basic workflow. Explore the <a href="../">QR Kot homepage</a> for an overview of the other generator and scanner features.</p>
+        </section>
+
+        <section id="faq" class="guide-faq">
+          <h2>Frequently asked questions</h2>
+          <details><summary>Can I use any photo as a QR code background?</summary><p>You can choose a photo from your phone, but not every image will work equally well. Look for an area with enough visual contrast and space for the QR code.</p></details>
+          <details><summary>Can I move and resize the QR code on the photo?</summary><p>Yes. QR Kot lets you position the QR code on the selected image and adjust its size.</p></details>
+          <details><summary>Will the QR code still scan after I add a photo?</summary><p>It may, provided the code remains clear and has enough contrast. Always scan the saved final graphic. If it does not scan reliably, adjust the design and test again.</p></details>
+          <details><summary>Can I use the finished image in print?</summary><p>You can save and share the graphic and use it in other materials. Before printing, test a physical sample at the intended size. QR Kot does not provide a printing service.</p></details>
+          <details><summary>Is QR Kot available for iPhone?</summary><p>QR Kot is currently available for Android devices through Google Play.</p></details>
+        </section>
+
+        <div class="guide-cta">
+          <h2>Make your next QR code part of the picture</h2>
+          <p>Choose a photo, position your code and create a custom QR graphic on your Android phone with QR Kot.</p>
+          <a class="btn btn-primary btn-lg" href="https://play.google.com/store/apps/details?id=com.devtrollo.qrmiauuu" target="_blank" rel="noopener noreferrer">Download QR Kot</a>
+          <div class="guide-footer-links"><a href="../">Explore QR Kot</a><a href="../#features">See app features</a><a href="../privacy.html">Privacy policy</a></div>
+        </div>
+      </article>
+
+      <aside class="guide-toc" aria-label="On this page">
+        <strong>On this page</strong>
+        <a href="#what">What is a photo QR code?</a>
+        <a href="#how-to">How to create one</a>
+        <a href="#design">Design and scanning tips</a>
+        <a href="#ideas">Ideas and use cases</a>
+        <a href="#qr-kot">Using QR Kot</a>
+        <a href="#faq">Frequently asked questions</a>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand brand-footer" href="../">
+          <img class="brand-icon" src="../assets/optimized/app-icon-180.webp" width="40" height="40" alt="QR Kot logo">
+          <span class="brand-name">QR Kot</span>
+        </a>
+        <p>QR code generator, scanner and custom QR graphics for Android.</p>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-heading">Explore</h2>
+        <a href="../">Home</a>
+        <a href="../#features">Features</a>
+        <a href="https://play.google.com/store/apps/details?id=com.devtrollo.qrmiauuu" target="_blank" rel="noopener noreferrer">Google Play</a>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-heading">Information</h2>
+        <a href="../privacy.html">Privacy policy</a>
+        <a href="mailto:devtrollo@gmail.com">Contact</a>
+      </div>
+    </div>
+    <div class="container footer-bottom"><p>© 2026 QR Kot. All rights reserved.</p></div>
+  </footer>
+</body>
+</html>

@@ -1,9 +1,9 @@
 window.QRKOT_TRANSLATIONS = {
     pl: {
-        'meta.title': 'QR Kot – generator i skaner kodów QR z własnym tłem',
-        'meta.description': 'QR Kot to generator i skaner kodów QR. Twórz kody z tekstu i linków, skanuj aparatem i łącz kody z własnymi zdjęciami, aby tworzyć oryginalne grafiki.',
-        'meta.ogTitle': 'QR Kot – Twórz. Personalizuj. Skanuj. Udostępniaj.',
-        'meta.ogDescription': 'Generuj i skanuj kody QR, czytaj je z obrazów i schowka oraz twórz własne grafiki, łącząc kody ze swoimi zdjęciami.',
+        'meta.title': 'QR Kot – generator i skaner kodów QR ze zdjęciem',
+        'meta.description': 'Twórz kody QR z tekstu i linków, skanuj je aparatem lub z obrazów. Dodawaj własne zdjęcia jako tło, ustawiaj kod i udostępniaj gotową grafikę.',
+        'meta.ogTitle': 'QR Kot – Generator i skaner kodów QR ze zdjęciem',
+        'meta.ogDescription': 'Twórz i skanuj kody QR, odczytuj je z obrazów i schowka oraz umieszczaj kody na własnych zdjęciach, aby tworzyć i udostępniać grafiki.',
         'meta.ogLocale': 'pl_PL',
 
         'nav.aria': 'Nawigacja główna',
@@ -19,7 +19,7 @@ window.QRKOT_TRANSLATIONS = {
         'brand.logoAlt': 'Logo aplikacji QR Kot',
 
         'hero.eyebrow': 'Generator i skaner kodów QR',
-        'hero.title': 'Twórz. Personalizuj. <span class="accent">Skanuj.</span> Udostępniaj.',
+        'hero.title': 'Generator i skaner kodów QR. <span class="accent">Dodaj własne zdjęcie.</span>',
         'hero.lead': 'QR Kot generuje kody QR z tekstu i adresów URL, skanuje je aparatem oraz pozwala połączyć kod z własnym zdjęciem — przesuń go, dopasuj rozmiar i stwórz grafikę, która wygląda tak, jak Ty.',
         'hero.cta': 'Pobierz w Google Play',
         'hero.secondary': 'Poznaj funkcje',
@@ -113,10 +113,10 @@ window.QRKOT_TRANSLATIONS = {
     },
 
     en: {
-        'meta.title': 'QR Kot – QR Code Generator & Scanner with Custom Backgrounds',
-        'meta.description': 'QR Kot generates and scans QR codes, reads them from images or the clipboard, and lets you combine codes with your own photos to create custom QR graphics.',
-        'meta.ogTitle': 'QR Kot – Create. Customize. Scan. Share.',
-        'meta.ogDescription': 'Generate and scan QR codes, read them from images and the clipboard, and create custom graphics by combining codes with your own photos.',
+        'meta.title': 'QR Kot – QR Code Generator & Scanner with Photo Backgrounds',
+        'meta.description': 'Create QR codes from text or links, scan with your camera or from images, and place codes on your own photos. Customize, save and share QR graphics.',
+        'meta.ogTitle': 'QR Kot – QR Code Generator & Scanner with Photo Backgrounds',
+        'meta.ogDescription': 'Create and scan QR codes, read them from images or the clipboard, and place codes on your own photos to make and share custom QR graphics.',
         'meta.ogLocale': 'en_US',
 
         'nav.aria': 'Main navigation',
@@ -132,7 +132,7 @@ window.QRKOT_TRANSLATIONS = {
         'brand.logoAlt': 'QR Kot app logo',
 
         'hero.eyebrow': 'QR code generator and scanner',
-        'hero.title': 'Create. Customize. <span class="accent">Scan.</span> Share.',
+        'hero.title': 'QR Code Generator & Scanner. <span class="accent">Add Your Own Photo.</span>',
         'hero.lead': 'QR Kot generates QR codes from text and URLs, scans them with your camera, and lets you combine a code with your own photo — move it, resize it, and create a graphic that looks like you.',
         'hero.cta': 'Get it on Google Play',
         'hero.secondary': 'Explore features',
@@ -225,11 +225,12 @@ window.QRKOT_TRANSLATIONS = {
         'a11y.skip': 'Skip to content'
     },
 
+
     'pt-BR': {
-        'meta.title': 'QR Kot – gerador e leitor de QR Code com fundos personalizados',
-        'meta.description': 'O QR Kot gera e escaneia QR Codes, lê códigos em imagens ou na área de transferência e permite combinar códigos com suas próprias fotos para criar artes personalizadas.',
-        'meta.ogTitle': 'QR Kot – Crie. Personalize. Escaneie. Compartilhe.',
-        'meta.ogDescription': 'Gere e escaneie QR Codes, leia códigos em imagens e na área de transferência e crie artes personalizadas combinando códigos com suas próprias fotos.',
+        'meta.title': 'QR Kot – Gerador e leitor de QR Code com suas fotos',
+        'meta.description': 'Crie QR Codes a partir de textos e links, escaneie com a câmera ou leia em imagens. Use suas próprias fotos como fundo e compartilhe artes personalizadas.',
+        'meta.ogTitle': 'QR Kot – Gerador e leitor de QR Code com suas fotos',
+        'meta.ogDescription': 'Crie e escaneie QR Codes, leia códigos em imagens ou na área de transferência e coloque códigos sobre suas próprias fotos para criar e compartilhar artes.',
         'meta.ogLocale': 'pt_BR',
 
         'nav.aria': 'Navegação principal',
@@ -245,7 +246,7 @@ window.QRKOT_TRANSLATIONS = {
         'brand.logoAlt': 'Logo do aplicativo QR Kot',
 
         'hero.eyebrow': 'Gerador e leitor de QR Code',
-        'hero.title': 'Crie. Personalize. <span class="accent">Escaneie.</span> Compartilhe.',
+        'hero.title': 'Gerador e leitor de QR Code. <span class="accent">Use suas próprias fotos.</span>',
         'hero.lead': 'O QR Kot gera QR Codes a partir de textos e links, escaneia com a câmera e permite combinar o código com suas próprias fotos — mova, redimensione e crie uma arte com a sua cara.',
         'hero.cta': 'Baixe no Google Play',
         'hero.secondary': 'Conheça os recursos',
