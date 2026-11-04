@@ -68,6 +68,10 @@ window.QRKOT_TRANSLATIONS = {
         'features.move.desc': 'Ustaw kod QR dokładnie tam, gdzie chcesz, i dopasuj jego rozmiar.',
         'features.share.title': 'Szybkie udostępnianie',
         'features.share.desc': 'Kopiuj, udostępniaj i wysyłaj gotowe kody oraz grafiki.',
+        'guide.eyebrow': 'Poradnik',
+        'guide.title': 'Jak umieścić kod QR na własnym zdjęciu?',
+        'guide.lead': 'Zobacz krok po kroku, jak stworzyć grafikę QR z własnym zdjęciem, dopasować kod i udostępnić gotowy projekt.',
+        'guide.link': 'Przeczytaj poradnik',
 
         'how.eyebrow': 'Jak to działa',
         'how.title': 'Od pomysłu do gotowego kodu w czterech krokach',
@@ -181,6 +185,10 @@ window.QRKOT_TRANSLATIONS = {
         'features.move.desc': 'Place your QR code exactly where you want it and scale it to fit.',
         'features.share.title': 'Quick Sharing',
         'features.share.desc': 'Copy, share, and send finished codes and graphics.',
+        'guide.eyebrow': 'Step-by-step guide',
+        'guide.title': 'How to put a QR code on your own photo',
+        'guide.lead': 'Learn how to create a QR graphic with your own photo, position and resize the code, and share the finished design.',
+        'guide.link': 'Read the guide',
 
         'how.eyebrow': 'How it works',
         'how.title': 'From idea to finished code in four steps',
@@ -295,6 +303,10 @@ window.QRKOT_TRANSLATIONS = {
         'features.move.desc': 'Posicione o QR Code exatamente onde quiser e ajuste o tamanho.',
         'features.share.title': 'Compartilhamento rápido',
         'features.share.desc': 'Copie, compartilhe e envie códigos e artes finalizadas.',
+        'guide.eyebrow': 'Guia passo a passo',
+        'guide.title': 'Como colocar um QR Code na sua própria foto',
+        'guide.lead': 'Veja como criar uma arte com QR Code usando sua foto, posicionar e redimensionar o código e compartilhar o resultado.',
+        'guide.link': 'Leia o guia',
 
         'how.eyebrow': 'Como funciona',
         'how.title': 'Do início ao código pronto em quatro passos',
