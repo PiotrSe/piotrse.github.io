@@ -1,0 +1,52 @@
+:root {
+    color-scheme: light;
+    font-family: system-ui, sans-serif;
+    line-height: 1.65;
+    color: #252c3a;
+    background: #fff;
+}
+
+body {
+    max-width: 48rem;
+    margin: 0 auto;
+    padding: clamp(1.25rem, 5vw, 3.5rem);
+}
+
+h1, h2 {
+    color: #121826;
+    line-height: 1.25;
+}
+
+h1 {
+    font-size: clamp(2rem, 6vw, 3rem);
+    margin: 0.75rem 0 0.5rem;
+}
+
+h2 {
+    font-size: 1.25rem;
+}
+
+section {
+    margin-block: 2rem;
+}
+
+a {
+    color: #1749a4;
+    text-underline-offset: 0.18em;
+    overflow-wrap: anywhere;
+}
+
+.date {
+    color: #505a6a;
+    margin-top: 0;
+}
+
+.home {
+    max-width: 34rem;
+    padding-top: clamp(3rem, 12vw, 8rem);
+}
+
+.app-icon {
+    display: block;
+    border-radius: 1rem;
+}
